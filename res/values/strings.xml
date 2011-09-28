@@ -1,5 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="hello">Hello World, AndroidjhlabsActivity!</string>
     <string name="app_name">Androidjhlabs</string>
+    <string name="color_adjustment_filter">color_adjustment_filter</string>
+    <string-array name="coloradjustmentfiltername">
+        <item>ChannelMixFilter</item>
+        <item>ContrastFilter</item>
+        <item>CurvesFilter</item>
+        <item>DiffusionFilter</item>
+        <item>DitherFilter</item>
+        <item>ExposureFilter </item>
+        <item>GainFilter</item>
+        <item>GammaFilter</item>
+        <item>GrayFilter</item>
+        <item>GrayscaleFilter</item>
+        <item>HSBAdjustFilter</item>
+        <item>InvertAlphaFilter</item>
+        <item>InvertFilter</item>
+        <item>LevelsFilter</item>
+        <item>LookupFilter</item>
+        <item>MapColorsFilter</item>
+        <item>MaskFilter</item>
+        <item>PosterizeFilter</item>
+        <item>QuantizeFilter</item>
+        <item>RescaleFilter</item>
+        <item>RGBAdjustFilter</item>
+        <item>SolarizeFilter</item>
+        <item>ThresholdFilter</item>
+        <item>TritoneFilter</item>
+    </string-array>
 </resources>
