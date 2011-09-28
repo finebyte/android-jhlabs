@@ -6,13 +6,40 @@
     <uses-sdk android:minSdkVersion="7" />
 
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name=".AndroidjhlabsActivity"
-                  android:label="@string/app_name">
+        <activity android:name=".AndroidjhlabsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
+        
+        <!-- Color Adjustment Filters Activity -->
+		<activity android:name=".ChannelMixFilterActivity"/>
+		<activity android:name=".ContrastFilterActivity"/>
+		<activity android:name=".CurvesFilterActivity"/>
+		<activity android:name=".DiffusionFilterActivity"/>
+		<activity android:name=".DitherFilterActivity"/>
+		<activity android:name=".ExposureFilterActivity"/>
+		<activity android:name=".GainFilterActivity"/>
+		<activity android:name=".GammaFilterActivity"/>
+		<activity android:name=".GrayFilterActivity"/>
+		<activity android:name=".GrayscaleFilterActivity"/>
+		<activity android:name=".HSBAdjustFilterActivity"/>
+		<activity android:name=".InvertAlphaFilterActivity"/>
+		<activity android:name=".InvertFilterActivity"/>
+		<activity android:name=".LevelsFilterActivity"/>
+		<activity android:name=".LookupFilterActivity"/>
+		<activity android:name=".MapColorsFilterActivity"/>
+		<activity android:name=".MaskFilterActivity"/>
+		<activity android:name=".PosterizeFilterActivity"/>
+		<activity android:name=".QuantizeFilterActivity"/>
+		<activity android:name=".RescaleFilterActivity"/>
+		<activity android:name=".RGBAdjustFilterActivity"/>
+		<activity android:name=".SolarizeFilterActivity"/>
+		<activity android:name=".ThresholdFilterActivity"/>
+		<activity android:name=".TritoneFilterActivity"/>
+		
+		<!-- Distortion and Warping Filters Activity -->
+		
     </application>
 </manifest>
