@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Androidjhlabs</string>
-    <string name="color_adjustment_filter">color_adjustment_filter</string>
-    <string-array name="coloradjustmentfiltername">
+    
+    <string name="color_adjustment_filter">Color Adjustment Filters</string>
+    <string-array name="color_adjustment_filtername">
         <item>ChannelMixFilter</item>
         <item>ContrastFilter</item>
         <item>CurvesFilter</item>
@@ -27,5 +28,76 @@
         <item>SolarizeFilter</item>
         <item>ThresholdFilter</item>
         <item>TritoneFilter</item>
+    </string-array>
+    
+    <string name="distortion_and_warping_filter">Distortion and Warping Filters</string>
+    <string-array name="distortion_and_warping_filtername">
+        <item>BicubicScaleFilter</item>
+        <item>CircleFilter</item>
+        <item>CropFilter</item>
+        <item>DiffuseFilter</item>
+        <item>DisplaceFilter </item>
+        <item>DissolveFilter </item>
+        <item>FieldWarpFilter</item>
+        <item>FlipFilter</item>
+        <item>KaleidoscopeFilter</item>
+        <item>MarbleFilter</item>
+        <item>MirrorFilter</item>
+        <item>OffsetFilter</item>
+        <item>PerspectiveFilter</item>
+        <item>PinchFilter</item>
+        <item>RippleFilter</item>
+        <item>RotateFilter</item>
+        <item>ScaleFilter</item>
+        <item>ShearFilter</item>
+        <item>SphereFilter</item>
+        <item>SwimFilter</item>
+        <item>TileImageFilter</item>
+        <item>TwirlFilter</item>
+        <item>WarpFilter</item>
+        <item>WaterFilter</item>
+    </string-array>
+    
+    <string name="effects_filter">Effects Filters</string>
+    <string-array name="effects_filtername">
+        <item>BlockFilter</item>
+        <item>BorderFilter</item>
+        <item>ChromeFilter</item>
+        <item>ColorHalftoneFilter</item>
+        <item>CrystallizeFilter</item>
+        <item>EmbossFilter</item>
+        <item>FeedbackFilter</item>
+        <item>HalftoneFilter</item>
+        <item>LightFilter</item>
+        <item>NoiseFilter</item>
+        <item>PointillizeFilter</item>
+        <item>ShadowFilter</item>
+        <item>ShapeFilter</item>
+        <item>StampFilter</item>
+        <item>WeaveFilter</item>
+    </string-array>
+    
+    <string name="blurring_and_sharpening_filter">Blurring and Sharpening Filters</string>
+    <string-array name="blurring_and_sharpening_filtername">
+        <item>BlurFilter</item>
+        <item>BoxBlurFilter</item>
+        <item>BumpFilter</item>
+        <item>ConvolveFilter</item>
+        <item>DespeckleFilter</item>
+        <item>GaussianFilter</item>
+        <item>GlowFilter</item>
+        <item>HighPassFilter</item>
+        <item>LensBlurFilter</item>
+        <item>MaximumFilter</item>
+        <item>MedianFilter</item>
+        <item>MinimumFilter</item>
+        <item>MotionBlurFilter</item>
+        <item>OilFilter</item>
+        <item>RaysFilter</item>
+        <item>ReduceNoiseFilter</item>
+        
+        <item>RaysFilter</item>
+        <item>OilFilter</item>
+        <item>RaysFilter</item>
     </string-array>
 </resources>

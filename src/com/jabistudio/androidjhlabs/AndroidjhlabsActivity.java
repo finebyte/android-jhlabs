@@ -18,24 +18,35 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
 	
 	private ScrollView mMainScrollView;
 	
+	private int mDispalyHeight;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Display display = ((WindowManager)getApplicationContext().getSystemService(Activity.WINDOW_SERVICE)).getDefaultDisplay();
+        mDispalyHeight = display.getHeight();
         
-        final int dispalyHeight = display.getHeight();
-        
-        mMainScrollView = new ScrollView(this);
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
+        linearLayout.addView(getListLayout(R.string.color_adjustment_filter,R.array.color_adjustment_filtername));
+        linearLayout.addView(getListLayout(R.string.distortion_and_warping_filter,R.array.distortion_and_warping_filtername));
+        linearLayout.addView(getListLayout(R.string.effects_filter,R.array.effects_filtername));
         
-        String[] filterNameArray = getResources().getStringArray(R.array.coloradjustmentfiltername); 
+        mMainScrollView = new ScrollView(this);
+        mMainScrollView.addView(linearLayout);
+        setContentView(mMainScrollView);
+    }
+    private LinearLayout getListLayout(int titleStringId, int stringArrayId){
+    	LinearLayout linearLayout = new LinearLayout(this);
+        linearLayout.setOrientation(LinearLayout.VERTICAL);
+        
+    	String[] filterNameArray = getResources().getStringArray(stringArrayId); 
         TextView filterTitle = new TextView(this);
         filterTitle.setTextSize(20);
         filterTitle.setTextColor(Color.WHITE);
         filterTitle.setBackgroundResource(R.drawable.title_bar);
-        filterTitle.setText(R.string.color_adjustment_filter);
+        filterTitle.setText(titleStringId);
         
         View titleSaparator = new View(this);
         titleSaparator.setBackgroundColor(Color.GRAY);
@@ -64,7 +75,7 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
         	
         	LinearLayout.LayoutParams textViewParams = (LinearLayout.LayoutParams) textView.getLayoutParams();
         	textViewParams.width = LayoutParams.FILL_PARENT;
-        	textViewParams.height = (int)(dispalyHeight/7.5f);
+        	textViewParams.height = (int)(mDispalyHeight/7.5f);
         	textView.setLayoutParams(textViewParams);
         	
         	LinearLayout.LayoutParams saparatorParams = (LinearLayout.LayoutParams) saparator.getLayoutParams();
@@ -72,11 +83,8 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
         	saparatorParams.height = 1;
         	saparator.setLayoutParams(saparatorParams);
         }
-        
-        mMainScrollView.addView(linearLayout);
-        setContentView(mMainScrollView);
+        return linearLayout;
     }
-
 	@Override
 	public void onClick(View v) {
 		
