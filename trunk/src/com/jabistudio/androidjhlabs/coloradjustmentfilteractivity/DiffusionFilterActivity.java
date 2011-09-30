@@ -1,5 +1,13 @@
 package com.jabistudio.androidjhlabs.coloradjustmentfilteractivity;
 
-public class DiffusionFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
+
+public class DiffusionFilterActivity  extends Activity{
+	 @Override
+	 public void onCreate(Bundle savedInstanceState) {
+		 super.onCreate(savedInstanceState);
+		 
+	 }
 
 }

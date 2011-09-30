@@ -1,5 +1,13 @@
 package com.jabistudio.androidjhlabs.coloradjustmentfilteractivity;
 
-public class RescaleFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
+
+public class RescaleFilterActivity  extends Activity{
+	 @Override
+	 public void onCreate(Bundle savedInstanceState) {
+		 super.onCreate(savedInstanceState);
+		 
+	 }
 
 }

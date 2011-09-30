@@ -1,5 +1,13 @@
 package com.jabistudio.androidjhlabs.coloradjustmentfilteractivity;
 
-public class TritoneFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
+
+public class TritoneFilterActivity  extends Activity{
+	 @Override
+	 public void onCreate(Bundle savedInstanceState) {
+		 super.onCreate(savedInstanceState);
+		 
+	 }
 
 }

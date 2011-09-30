@@ -1,5 +1,13 @@
 package com.jabistudio.androidjhlabs.coloradjustmentfilteractivity;
 
-public class InvertFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
+
+public class InvertFilterActivity  extends Activity{
+	 @Override
+	 public void onCreate(Bundle savedInstanceState) {
+		 super.onCreate(savedInstanceState);
+		 
+	 }
 
 }
