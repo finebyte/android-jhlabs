@@ -1,8 +1,12 @@
 package com.jabistudio.androidjhlabs;
 
+import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.View;
@@ -15,6 +19,12 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class AndroidjhlabsActivity extends Activity implements OnClickListener{
+	
+	private static final String ACTIVITY = "Activity";
+	private static final String DOT = ".";
+	
+	private static final float FILTER_TEXT_SIZE = 14.6f;
+	private static final float TITLE_TEXT_SIZE = 13.3f;
 	
 	private ScrollView mMainScrollView;
 	
@@ -29,21 +39,25 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
         
         LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
-        linearLayout.addView(getListLayout(R.string.color_adjustment_filter,R.array.color_adjustment_filtername));
-        linearLayout.addView(getListLayout(R.string.distortion_and_warping_filter,R.array.distortion_and_warping_filtername));
-        linearLayout.addView(getListLayout(R.string.effects_filter,R.array.effects_filtername));
+        linearLayout.addView(getListLayout(R.string.color_adjustment_filter, R.string.coloradjustmentfilteractivity, R.array.color_adjustment_filtername));
+        linearLayout.addView(getListLayout(R.string.distortion_and_warping_filter, R.string.distortionandwarpingactivity, R.array.distortion_and_warping_filtername));
+        linearLayout.addView(getListLayout(R.string.effects_filter, R.string.effectsactivity, R.array.effects_filtername));
+        linearLayout.addView(getListLayout(R.string.blurring_and_sharpening_filter, R.string.blurringandsharpeningactivity, R.array.blurring_and_sharpening_filtername));
+        linearLayout.addView(getListLayout(R.string.edge_detection_filter, R.string.edgedetectionactivity, R.array.edge_detection_filtername));
+        linearLayout.addView(getListLayout(R.string.transitions_filter, R.string.transitionsactivity, R.array.transitions_filtername));
+        linearLayout.addView(getListLayout(R.string.alpha_channel_filter, R.string.alphachannelactivity, R.array.alpha_channel_filtername));
         
         mMainScrollView = new ScrollView(this);
         mMainScrollView.addView(linearLayout);
         setContentView(mMainScrollView);
     }
-    private LinearLayout getListLayout(int titleStringId, int stringArrayId){
+    private LinearLayout getListLayout(int titleStringId, int activitypackageNameId, int stringArrayId){
     	LinearLayout linearLayout = new LinearLayout(this);
         linearLayout.setOrientation(LinearLayout.VERTICAL);
         
     	String[] filterNameArray = getResources().getStringArray(stringArrayId); 
         TextView filterTitle = new TextView(this);
-        filterTitle.setTextSize(20);
+        filterTitle.setTextSize(AndroidUtils.dipTopx(TITLE_TEXT_SIZE,this));
         filterTitle.setTextColor(Color.WHITE);
         filterTitle.setBackgroundResource(R.drawable.title_bar);
         filterTitle.setText(titleStringId);
@@ -63,10 +77,13 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
         	TextView textView = new TextView(this);
         	textView.setText(filterNameArray[i]);
         	textView.setTextColor(Color.WHITE);
-        	textView.setTextSize(22);
+        	textView.setTextSize(AndroidUtils.dipTopx(FILTER_TEXT_SIZE,this));
         	textView.setGravity(Gravity.CENTER_VERTICAL);
         	textView.setBackgroundResource(android.R.drawable.list_selector_background);
         	textView.setClickable(true);
+        	textView.setOnClickListener(this);
+        	final String activitypackageName = getResources().getString(activitypackageNameId);
+        	textView.setTag(DOT + activitypackageName + DOT + filterNameArray[i] + ACTIVITY);
         	View saparator = new View(this);
         	saparator.setBackgroundColor(Color.GRAY);
         	
@@ -87,6 +104,8 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
     }
 	@Override
 	public void onClick(View v) {
-		
+		Intent intent = new Intent();
+		intent.setClassName(getPackageName(), getPackageName() + (String)(v.getTag()));
+		startActivity(intent);
 	}
 }

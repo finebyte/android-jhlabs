@@ -3,6 +3,7 @@
     <string name="app_name">Androidjhlabs</string>
     
     <string name="color_adjustment_filter">Color Adjustment Filters</string>
+    <string name="coloradjustmentfilteractivity">coloradjustmentfilteractivity</string>
     <string-array name="color_adjustment_filtername">
         <item>ChannelMixFilter</item>
         <item>ContrastFilter</item>
@@ -31,6 +32,7 @@
     </string-array>
     
     <string name="distortion_and_warping_filter">Distortion and Warping Filters</string>
+    <string name="distortionandwarpingactivity">distortionandwarpingactivity</string>
     <string-array name="distortion_and_warping_filtername">
         <item>BicubicScaleFilter</item>
         <item>CircleFilter</item>
@@ -59,6 +61,7 @@
     </string-array>
     
     <string name="effects_filter">Effects Filters</string>
+    <string name="effectsactivity">effectsactivity</string>
     <string-array name="effects_filtername">
         <item>BlockFilter</item>
         <item>BorderFilter</item>
@@ -78,6 +81,7 @@
     </string-array>
     
     <string name="blurring_and_sharpening_filter">Blurring and Sharpening Filters</string>
+    <string name="blurringandsharpeningactivity">blurringandsharpeningactivity</string>
     <string-array name="blurring_and_sharpening_filtername">
         <item>BlurFilter</item>
         <item>BoxBlurFilter</item>
@@ -95,9 +99,30 @@
         <item>OilFilter</item>
         <item>RaysFilter</item>
         <item>ReduceNoiseFilter</item>
-        
-        <item>RaysFilter</item>
-        <item>OilFilter</item>
-        <item>RaysFilter</item>
+        <item>SharpenFilter</item>
+        <item>SmartBlurFilter</item>
+        <item>UnsharpFilter</item>
+        <item>VariableBlurFilter</item>
+    </string-array>
+    
+    <string name="edge_detection_filter">Edge Detection</string>
+    <string name="edgedetectionactivity">edgedetectionactivity</string>
+    <string-array name="edge_detection_filtername">
+        <item>DoGFilter</item>
+        <item>EdgeFilter</item>
+        <item>LaplaceFilter</item>
+    </string-array>
+    
+    <string name="transitions_filter">Transitions</string>
+    <string name="transitionsactivity">transitionsactivity</string>
+    <string-array name="transitions_filtername">
+        <item>BlurTransition</item>
+        <item>GradientWipeFilter</item>
+    </string-array>
+    
+    <string name="alpha_channel_filter">Alpha Channel Filters</string>
+    <string name="alphachannelactivity">alphachannelactivity</string>
+    <string-array name="alpha_channel_filtername">
+        <item>OpacityFilter</item>
     </string-array>
 </resources>

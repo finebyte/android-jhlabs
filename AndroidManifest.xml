@@ -14,30 +14,30 @@
         </activity>
         
         <!-- Color Adjustment Filters Activity -->
-		<activity android:name=".ChannelMixFilterActivity"/>
-		<activity android:name=".ContrastFilterActivity"/>
-		<activity android:name=".CurvesFilterActivity"/>
-		<activity android:name=".DiffusionFilterActivity"/>
-		<activity android:name=".DitherFilterActivity"/>
-		<activity android:name=".ExposureFilterActivity"/>
-		<activity android:name=".GainFilterActivity"/>
-		<activity android:name=".GammaFilterActivity"/>
-		<activity android:name=".GrayFilterActivity"/>
-		<activity android:name=".GrayscaleFilterActivity"/>
-		<activity android:name=".HSBAdjustFilterActivity"/>
-		<activity android:name=".InvertAlphaFilterActivity"/>
-		<activity android:name=".InvertFilterActivity"/>
-		<activity android:name=".LevelsFilterActivity"/>
-		<activity android:name=".LookupFilterActivity"/>
-		<activity android:name=".MapColorsFilterActivity"/>
-		<activity android:name=".MaskFilterActivity"/>
-		<activity android:name=".PosterizeFilterActivity"/>
-		<activity android:name=".QuantizeFilterActivity"/>
-		<activity android:name=".RescaleFilterActivity"/>
-		<activity android:name=".RGBAdjustFilterActivity"/>
-		<activity android:name=".SolarizeFilterActivity"/>
-		<activity android:name=".ThresholdFilterActivity"/>
-		<activity android:name=".TritoneFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.ChannelMixFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.ContrastFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.CurvesFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.DiffusionFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.DitherFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.ExposureFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.GainFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.GammaFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.GrayFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.GrayscaleFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.HSBAdjustFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.InvertAlphaFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.InvertFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.LevelsFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.LookupFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.MapColorsFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.MaskFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.PosterizeFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.QuantizeFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.RescaleFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.RGBAdjustFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.SolarizeFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.ThresholdFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.TritoneFilterActivity"/>
 		
 		<!-- Distortion and Warping Filters Activity -->
 		
