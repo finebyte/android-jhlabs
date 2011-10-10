@@ -1,12 +1,17 @@
 package com.jabistudio.androidjhlabs.filter.util;
 
+import com.jabistudio.androidjhlabs.filter.BlurFilter;
+
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.util.Log;
 import android.util.TypedValue;
 
 public class AndroidUtils {
 	/**
-	 * dp를 px로
+	 * dp to px
 	 * @param dip
 	 * @param context
 	 * @return
@@ -18,7 +23,7 @@ public class AndroidUtils {
 	    return num;
 	}
 	/**
-	 * px를 dp로
+	 * px to dp
 	 * @param px
 	 * @param context
 	 * @return
@@ -26,5 +31,31 @@ public class AndroidUtils {
 	public static float pxTodip(int px, Context context) {
 		float num = px / context.getResources().getDisplayMetrics().density;
 	    return num;
+	}
+	/**
+	 * Drawable을 Bitmap으로 바꾸어 준다.
+	 * @param drawable
+	 * @return
+	 */
+	public static Bitmap drawableToBitmap(Drawable drawable){
+	    final int width = drawable.getIntrinsicWidth();
+	    final int height = drawable.getIntrinsicHeight();
+        Bitmap bitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bitmap);
+        drawable.setBounds(0, 0, width, height);
+        drawable.draw(canvas);
+        return bitmap;
+	}
+	
+	public static int[] drawableToIntArray(Drawable drawable){
+	    Bitmap bitmap = AndroidUtils.drawableToBitmap(drawable);
+        
+        final int bitmapWidth = bitmap.getWidth();
+        final int bitmapHeight = bitmap.getHeight();
+        
+        int[] colors = new int[bitmapWidth *  bitmapHeight];
+        bitmap.getPixels(colors, 0, bitmapWidth, 0, 0, bitmapWidth, bitmapHeight);
+        
+        return colors;
 	}
 }
