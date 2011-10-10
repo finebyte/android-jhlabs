@@ -2,6 +2,12 @@
 <resources>
     <string name="app_name">Androidjhlabs</string>
     
+    <string name="original_image">Original Image</string>
+    <string name="modify_image">Modify Image</string>
+    <string name="value">Value</string>
+    <string name="apply">Apply</string>
+    
+    
     <string name="color_adjustment_filter">Color Adjustment Filters</string>
     <string name="coloradjustmentfilteractivity">coloradjustmentfilteractivity</string>
     <string-array name="color_adjustment_filtername">
