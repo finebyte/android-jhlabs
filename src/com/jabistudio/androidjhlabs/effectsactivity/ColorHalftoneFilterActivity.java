@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.effectsactivity;
 
-public class ColorHalftoneFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class ColorHalftoneFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

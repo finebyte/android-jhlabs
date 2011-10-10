@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.distortionandwarpingactivity;
 
-public class RotateFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class RotateFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

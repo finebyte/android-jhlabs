@@ -1,5 +1,10 @@
 package com.jabistudio.androidjhlabs.blurringandsharpeningactivity;
 
-public class BoxBlurFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class BoxBlurFilterActivity extends Activity{
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
 }

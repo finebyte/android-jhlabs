@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.transitionsactivity;
 
-public class GradientWipeFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class GradientWipeFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

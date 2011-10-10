@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.distortionandwarpingactivity;
 
-public class OffsetFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class OffsetFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }
