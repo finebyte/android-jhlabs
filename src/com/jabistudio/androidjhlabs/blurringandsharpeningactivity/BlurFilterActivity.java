@@ -92,10 +92,16 @@ public class BlurFilterActivity extends Activity implements OnClickListener{
      * @param mainLayout
      */
     private void filterButtonSetup(LinearLayout mainLayout){
+        TextView clickView = new TextView(this);
+        clickView.setText(R.string.apply);
+        clickView.setTextSize(TITLE_TEXT_SIZE);
+        clickView.setGravity(Gravity.CENTER);
+        
         Button button = new Button(this);
         button.setText(R.string.apply);
         button.setOnClickListener(this);
          
+        mainLayout.addView(clickView);
         mainLayout.addView(button);
     }
     
