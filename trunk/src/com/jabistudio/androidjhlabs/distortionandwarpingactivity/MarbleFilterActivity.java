@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.distortionandwarpingactivity;
 
-public class MarbleFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class MarbleFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

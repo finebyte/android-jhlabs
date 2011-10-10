@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.effectsactivity;
 
-public class NoiseFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class NoiseFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

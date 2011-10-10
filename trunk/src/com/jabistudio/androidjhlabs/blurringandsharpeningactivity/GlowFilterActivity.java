@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.blurringandsharpeningactivity;
 
-public class GlowFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class GlowFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

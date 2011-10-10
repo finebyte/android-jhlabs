@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.edgedetectionactivity;
 
-public class DoGFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class DoGFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

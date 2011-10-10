@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.edgedetectionactivity;
 
-public class LaplaceFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class LaplaceFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

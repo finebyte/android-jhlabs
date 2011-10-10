@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.blurringandsharpeningactivity;
 
-public class MotionBlurFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class MotionBlurFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.effectsactivity;
 
-public class WeaveFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class WeaveFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.blurringandsharpeningactivity;
 
-public class VariableBlurFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class VariableBlurFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

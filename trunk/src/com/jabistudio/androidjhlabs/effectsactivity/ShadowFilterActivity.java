@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.effectsactivity;
 
-public class ShadowFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class ShadowFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }

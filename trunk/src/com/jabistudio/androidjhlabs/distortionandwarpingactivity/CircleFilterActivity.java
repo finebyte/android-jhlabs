@@ -1,5 +1,12 @@
 package com.jabistudio.androidjhlabs.distortionandwarpingactivity;
 
-public class CircleFilterActivity {
+import android.app.Activity;
+import android.os.Bundle;
 
+public class CircleFilterActivity extends Activity{
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        
+    }
 }
