@@ -1,12 +1,9 @@
 package com.jabistudio.androidjhlabs.filter.util;
 
-import com.jabistudio.androidjhlabs.filter.BlurFilter;
-
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.util.TypedValue;
 
 public class AndroidUtils {
@@ -51,6 +48,16 @@ public class AndroidUtils {
 	    Bitmap bitmap = AndroidUtils.drawableToBitmap(drawable);
         
         final int bitmapWidth = bitmap.getWidth();
+        final int bitmapHeight = bitmap.getHeight();
+        
+        int[] colors = new int[bitmapWidth *  bitmapHeight];
+        bitmap.getPixels(colors, 0, bitmapWidth, 0, 0, bitmapWidth, bitmapHeight);
+        
+        return colors;
+	}
+	
+	public static int[] bitmapToIntArray(Bitmap bitmap){
+	    final int bitmapWidth = bitmap.getWidth();
         final int bitmapHeight = bitmap.getHeight();
         
         int[] colors = new int[bitmapWidth *  bitmapHeight];

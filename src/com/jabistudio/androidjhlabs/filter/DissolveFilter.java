@@ -18,6 +18,8 @@ package com.jabistudio.androidjhlabs.filter;
 
 import java.util.*;
 
+import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+
 /**
  * A filter which "dissolves" an image by thresholding the alpha channel with random numbers.
  */

@@ -16,7 +16,6 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
-import com.jabistudio.androidjhlabs.filter.abstractfilter.PointFilter;
 import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
 
 /**

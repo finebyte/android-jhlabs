@@ -16,24 +16,18 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
-import android.util.Log;
-
 /**
  * An abstract superclass for point filters. The interface is the same as the old RGBImageFilter.
  */
 public abstract class PointFilter {
-
+	private int width;
+	private int height;
+	
 	protected boolean canFilterIndexColorModel = false;
 
     public int[] filter( int[] src ,int w, int h) {
-    	try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-        int width = w;
-        int height = h;
+    	width = w;
+    	height = h;
 
         setDimensions( width, height);
         
@@ -61,7 +55,9 @@ public abstract class PointFilter {
         return outPixels;
     }
 
-	public void setDimensions(int width, int height) {
+	public void setDimensions(int w, int h) {
+		width = w;
+    	height = h;
 	}
 
 	public abstract int filterRGB(int x, int y, int rgb);

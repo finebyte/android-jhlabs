@@ -19,6 +19,8 @@ package com.jabistudio.androidjhlabs.filter;
 import java.util.*;
 import java.awt.*;
 
+import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+
 import android.graphics.Rect;
 
 public class SmearFilter extends WholeImageFilter {
