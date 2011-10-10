@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+
 import android.graphics.Rect;
 import android.util.Log;
 

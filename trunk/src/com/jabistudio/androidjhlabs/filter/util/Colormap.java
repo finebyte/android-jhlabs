@@ -14,7 +14,7 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 
-package com.jabistudio.androidjhlabs.filter;
+package com.jabistudio.androidjhlabs.filter.util;
 
 /**
  * An interface for color maps.  These are passed to filters which convert gray values to

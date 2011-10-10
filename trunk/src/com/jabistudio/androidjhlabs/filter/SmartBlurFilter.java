@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.util.Kernel;
+
 /**
  * A filter which performs a "smart blur". i.e. a blur which blurs smotth parts of the image while preserving edges.
  */

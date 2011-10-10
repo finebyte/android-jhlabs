@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+
 /**
  * A filter which distorts and image by performing coordinate conversions between rectangular and polar coordinates.
  */

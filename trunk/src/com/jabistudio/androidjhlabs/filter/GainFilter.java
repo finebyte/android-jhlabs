@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+
 /**
  * A filter which changes the gain and bias of an image - similar to ContrastFilter.
  */

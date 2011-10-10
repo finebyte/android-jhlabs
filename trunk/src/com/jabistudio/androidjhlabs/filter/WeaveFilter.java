@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+
 public class WeaveFilter extends PointFilter {
 
 	private float xWidth = 16;

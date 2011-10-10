@@ -16,6 +16,9 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+import com.jabistudio.androidjhlabs.filter.util.Kernel;
+
 
 /**
  * A filter which applies Gaussian blur to an image. This is a subclass of ConvolveFilter

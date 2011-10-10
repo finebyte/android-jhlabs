@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+
 /**
  * A filter which performs a tritone conversion on an image. Given three colors for shadows, midtones and highlights,
  * it converts the image to grayscale and then applies a color mapping based on the colors.
