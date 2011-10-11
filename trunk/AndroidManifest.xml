@@ -13,6 +13,8 @@
             </intent-filter>
         </activity>
         
+        <activity android:name=".FilterListActivity"/>
+        
         <!-- Color Adjustment Filters Activity -->
 		<activity android:name=".coloradjustmentfilteractivity.ChannelMixFilterActivity"/>
 		<activity android:name=".coloradjustmentfilteractivity.ContrastFilterActivity"/>
@@ -83,26 +85,25 @@
 		<activity android:name=".effectsactivity.WeaveFilterActivity"/>
 		
 		<!-- Blurring and Sharpening Filters Activity -->
-		<activity android:name=".blurringandsharpeningactivity.BlurFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.BoxBlurFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.BumpFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.ConvolveFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.DespeckleFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.GaussianFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.GlowFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.HighPassFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.LensBlurFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.MaximumFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.MedianFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.MinimumFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.MotionBlurFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.OilFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.RaysFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.ReduceNoiseFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.SharpenFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.SmartBlurFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.UnsharpFilterActivity"/>
-		<activity android:name=".blurringandsharpeningactivity.VariableBlurFilterActivity"/>
+		<activity android:name=".blurringandsharpeningactivity.BlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.BoxBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.BumpFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.DespeckleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.GaussianFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.GlowFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.HighPassFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.LensBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.MaximumFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.MedianFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.MinimumFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.MotionBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.OilFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.RaysFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.ReduceNoiseFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.SharpenFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.SmartBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.UnsharpFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".blurringandsharpeningactivity.VariableBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
 		
 		<!-- Edge Detection Activity -->
 		<activity android:name=".edgedetectionactivity.DoGFilterActivity"/>

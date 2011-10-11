@@ -4,11 +4,17 @@
     
     <string name="original_image">Original Image</string>
     <string name="modify_image">Modify Image</string>
-    <string name="value">Value</string>
-    <string name="apply">Apply</string>
     
+    <string-array name="filter_title_name">
+    	<item>Color Adjustment Filters</item>
+        <item>Distortion and Warping Filters</item>
+        <item>Effects Filters</item>
+        <item>Blurring and Sharpening Filters</item>
+        <item>Edge Detection</item>
+        <item>Transitions</item>
+        <item>Alpha Channel Filters</item>
+    </string-array>
     
-    <string name="color_adjustment_filter">Color Adjustment Filters</string>
     <string name="coloradjustmentfilteractivity">coloradjustmentfilteractivity</string>
     <string-array name="color_adjustment_filtername">
         <item>ChannelMixFilter</item>
@@ -37,7 +43,6 @@
         <item>TritoneFilter</item>
     </string-array>
     
-    <string name="distortion_and_warping_filter">Distortion and Warping Filters</string>
     <string name="distortionandwarpingactivity">distortionandwarpingactivity</string>
     <string-array name="distortion_and_warping_filtername">
         <item>BicubicScaleFilter</item>
@@ -66,7 +71,6 @@
         <item>WaterFilter</item>
     </string-array>
     
-    <string name="effects_filter">Effects Filters</string>
     <string name="effectsactivity">effectsactivity</string>
     <string-array name="effects_filtername">
         <item>BlockFilter</item>
@@ -86,13 +90,11 @@
         <item>WeaveFilter</item>
     </string-array>
     
-    <string name="blurring_and_sharpening_filter">Blurring and Sharpening Filters</string>
     <string name="blurringandsharpeningactivity">blurringandsharpeningactivity</string>
     <string-array name="blurring_and_sharpening_filtername">
         <item>BlurFilter</item>
         <item>BoxBlurFilter</item>
         <item>BumpFilter</item>
-        <item>ConvolveFilter</item>
         <item>DespeckleFilter</item>
         <item>GaussianFilter</item>
         <item>GlowFilter</item>
@@ -110,8 +112,7 @@
         <item>UnsharpFilter</item>
         <item>VariableBlurFilter</item>
     </string-array>
-    
-    <string name="edge_detection_filter">Edge Detection</string>
+   
     <string name="edgedetectionactivity">edgedetectionactivity</string>
     <string-array name="edge_detection_filtername">
         <item>DoGFilter</item>
@@ -119,14 +120,12 @@
         <item>LaplaceFilter</item>
     </string-array>
     
-    <string name="transitions_filter">Transitions</string>
     <string name="transitionsactivity">transitionsactivity</string>
     <string-array name="transitions_filtername">
         <item>BlurTransition</item>
         <item>GradientWipeFilter</item>
     </string-array>
     
-    <string name="alpha_channel_filter">Alpha Channel Filters</string>
     <string name="alphachannelactivity">alphachannelactivity</string>
     <string-array name="alpha_channel_filtername">
         <item>OpacityFilter</item>

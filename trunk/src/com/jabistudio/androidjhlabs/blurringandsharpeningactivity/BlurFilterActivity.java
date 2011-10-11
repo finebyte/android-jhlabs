@@ -1,8 +1,11 @@
 package com.jabistudio.androidjhlabs.blurringandsharpeningactivity;
 
+import com.jabistudio.androidjhlabs.SuperFilterActivity;
 import com.jabistudio.androidjhlabs.R;
 import com.jabistudio.androidjhlabs.filter.BlurFilter;
+import com.jabistudio.androidjhlabs.filter.ConvolveFilter;
 import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
+import com.jabistudio.androidjhlabs.filter.util.Kernel;
 
 import android.app.Activity;
 import android.graphics.Bitmap;
@@ -21,87 +24,36 @@ import android.widget.SeekBar;
 import android.widget.SeekBar.OnSeekBarChangeListener;
 import android.widget.TextView;
 
-public class BlurFilterActivity extends Activity implements OnClickListener{
-    private static final String TITLE_NAME = "Blur";
+public class BlurFilterActivity extends SuperFilterActivity implements OnClickListener{
+    private static final String TITLE = "Blur";
     
-    private static final int TITLE_TEXT_SIZE = 22;
+    private static final String APPLY_STRING = "Apply:";
+    private int mApplyCount = 0;
     
-    private LinearLayout mMainLayout;
-    private ImageView mModifyImageView;
-    private Bitmap mFilterBitmap;
-    
+    private TextView mApplyText;
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle(TITLE_NAME);
-        
-        mMainLayout = new LinearLayout(this);
-        mMainLayout.setOrientation(LinearLayout.VERTICAL);
-        mMainLayout.setBackgroundColor(Color.WHITE);
-        
-        orignalLayoutSetup(mMainLayout);
-        modifyLayoutSetup(mMainLayout);
+        setTitle(TITLE);
         filterButtonSetup(mMainLayout);
-        
-        setContentView(mMainLayout);
     }
-    /**
-     * originalLayoutSetting
-     * @param mainLayout
-     */
-    private void orignalLayoutSetup(LinearLayout mainLayout){
-        LinearLayout originalLayout = new LinearLayout(this);
-        originalLayout.setOrientation(LinearLayout.VERTICAL);
-        
-        TextView originalTitleTextVeiw = new TextView(this);
-        originalTitleTextVeiw.setText(R.string.original_image);
-        originalTitleTextVeiw.setTextSize(TITLE_TEXT_SIZE);
-        originalTitleTextVeiw.setGravity(Gravity.CENTER);
-        
-        ImageView originalImageView = new ImageView(this);
-        originalImageView.setImageResource(R.drawable.image);
-        
-        originalLayout.addView(originalTitleTextVeiw);
-        originalLayout.addView(originalImageView);
-        
-        mainLayout.addView(originalLayout);
-    }
-    /**
-     * modifyLayoutSetting
-     * @param mainLayout
-     */
-    private void modifyLayoutSetup(LinearLayout mainLayout){
-        LinearLayout modifyLayout = new LinearLayout(this);
-        modifyLayout.setOrientation(LinearLayout.VERTICAL);
-        
-        TextView modifyTitleTextVeiw = new TextView(this);
-        modifyTitleTextVeiw.setText(R.string.modify_image);
-        modifyTitleTextVeiw.setTextSize(TITLE_TEXT_SIZE);
-        modifyTitleTextVeiw.setGravity(Gravity.CENTER);
-        
-        mModifyImageView = new ImageView(this);
-        mModifyImageView.setImageResource(R.drawable.image);
-        
-        modifyLayout.addView(modifyTitleTextVeiw);
-        modifyLayout.addView(mModifyImageView);
-        
-        mainLayout.addView(modifyLayout);
-    }
+    
     /**
      * filterButtonSetting
      * @param mainLayout
      */
     private void filterButtonSetup(LinearLayout mainLayout){
-        TextView clickView = new TextView(this);
-        clickView.setText(R.string.apply);
-        clickView.setTextSize(TITLE_TEXT_SIZE);
-        clickView.setGravity(Gravity.CENTER);
+        mApplyText = new TextView(this);
+        mApplyText.setText(APPLY_STRING + mApplyCount);
+        mApplyText.setTextSize(TITLE_TEXT_SIZE);
+        mApplyText.setTextColor(Color.BLACK);
+        mApplyText.setGravity(Gravity.CENTER);
         
         Button button = new Button(this);
-        button.setText(R.string.apply);
+        button.setText(APPLY_STRING);
         button.setOnClickListener(this);
          
-        mainLayout.addView(clickView);
+        mainLayout.addView(mApplyText);
         mainLayout.addView(button);
     }
     
@@ -116,23 +68,9 @@ public class BlurFilterActivity extends Activity implements OnClickListener{
         colors = filter.filter(colors, width, height);
         
         setModifyView(colors, width, height);
+        
+        mApplyCount++;
+        mApplyText.setText(APPLY_STRING + mApplyCount);
     }
-    /**
-     * ModifyView set
-     */
-    private void setModifyView(int[] colors, int width, int height){
-        mModifyImageView.setWillNotDraw(true);
-        
-        if(mFilterBitmap != null){
-            mFilterBitmap.recycle();
-            mFilterBitmap = null;
-        }
-        
-        mFilterBitmap = Bitmap.createBitmap(colors, 0, width, width, height, Bitmap.Config.ARGB_8888);
-        mModifyImageView.setImageBitmap(mFilterBitmap);
-        
-        mModifyImageView.setWillNotDraw(false);
-        mModifyImageView.postInvalidate();
-    }
-    
+   
 }
