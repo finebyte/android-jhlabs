@@ -7,6 +7,6 @@ public class LensBlurFilterActivity extends Activity{
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
+        //TODO 
     }
 }
