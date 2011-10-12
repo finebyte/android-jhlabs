@@ -89,12 +89,6 @@ public class EdgeFilter extends WholeImageFilter {
 	}
 
 	protected int[] filterPixels( int width, int height, int[] inPixels, Rect transformedSpace ) {
-		try {
-			Thread.sleep(6000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		int index = 0;
 		int[] outPixels = new int[width * height];
 

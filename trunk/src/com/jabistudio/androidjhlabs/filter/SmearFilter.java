@@ -129,12 +129,6 @@ public class SmearFilter extends WholeImageFilter {
 	}
 	
 	protected int[] filterPixels( int width, int height, int[] inPixels, Rect transformedSpace ) {
-		try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		int[] outPixels = new int[width * height];
 
 		randomGenerator.setSeed(seed);

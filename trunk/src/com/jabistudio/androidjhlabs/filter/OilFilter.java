@@ -66,12 +66,6 @@ public class OilFilter extends WholeImageFilter {
 	}
 	
 	protected int[] filterPixels( int width, int height, int[] inPixels, Rect transformedSpace ) {
-		try {
-			Thread.sleep(13000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 		int index = 0;
 		int[] rHistogram = new int[levels];
 		int[] gHistogram = new int[levels];

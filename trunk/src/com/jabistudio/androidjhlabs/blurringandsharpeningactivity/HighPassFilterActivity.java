@@ -7,6 +7,7 @@ import com.jabistudio.androidjhlabs.filter.HighPassFilter;
 import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -30,6 +31,9 @@ public class HighPassFilterActivity extends SuperFilterActivity implements OnSee
     private TextView mRadiusTextView;
     
     private int mRadiusValue;
+    
+    private ProgressDialog mProgressDialog;
+    private int[] mColors;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -77,13 +81,25 @@ public class HighPassFilterActivity extends SuperFilterActivity implements OnSee
         final int width = mOriginalImageView.getDrawable().getIntrinsicWidth();
         final int height = mOriginalImageView.getDrawable().getIntrinsicHeight();
         
-        int[] colors = AndroidUtils.drawableToIntArray(mOriginalImageView.getDrawable());
+        mColors = AndroidUtils.drawableToIntArray(mOriginalImageView.getDrawable());
+        mProgressDialog = ProgressDialog.show(this, "", "Wait......");
         
-        HighPassFilter filter = new HighPassFilter();
-        filter.setRadius(mRadiusValue);
+        Thread thread = new Thread(){
+            public void run() {
+                HighPassFilter filter = new HighPassFilter();
+                filter.setRadius(mRadiusValue);
 
-        colors = filter.filter(colors, width, height);
-        
-        setModifyView(colors, width, height);
+                mColors = filter.filter(mColors, width, height);
+                HighPassFilterActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setModifyView(mColors, width, height);
+                    }
+                });
+                mProgressDialog.dismiss();
+            }
+        };
+        thread.setDaemon(true);
+        thread.start();      
     }
 }
