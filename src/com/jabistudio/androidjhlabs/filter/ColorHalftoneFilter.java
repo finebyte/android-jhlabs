@@ -106,12 +106,6 @@ public class ColorHalftoneFilter {
 	}
 
     public int[] filter( int[] src ,int w, int h ) {
-    	try {
-			Thread.sleep(4000);
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
         int width = w;
         int height = h;
 

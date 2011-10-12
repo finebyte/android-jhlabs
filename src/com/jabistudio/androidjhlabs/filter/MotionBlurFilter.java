@@ -171,10 +171,10 @@ public class MotionBlurFilter {
         int[] inPixels = src;
         int[] outPixels = new int[width*height];
 
-		float sinAngle = (float)Math.sin(angle);
-		float cosAngle = (float)Math.cos(angle);
+		//float sinAngle = (float)Math.sin(angle);
+		//float cosAngle = (float)Math.cos(angle);
 
-		float total;
+		//float total;
 		int cx = width/2;
 		int cy = height/2;
 		int index = 0;
@@ -186,7 +186,6 @@ public class MotionBlurFilter {
 		int repetitions = (int)maxDistance;
 		Matrix t = new Matrix();
 		float[] p = new float[2];
-		//Point2D.Float p = new Point2D.Float();
 
         if ( premultiplyAlpha )
 			ImageMath.premultiply( inPixels, 0, inPixels.length );
@@ -201,36 +200,19 @@ public class MotionBlurFilter {
 
 					p[0] = x;
 					p[1] = y;
-					//p.x = x;
-					//p.y = y;
 					t.reset();
-					//t.setToIdentity();
 					t.preTranslate( cx+f*translateX, cy+f*translateY );
-					//t.postTranslate( cx+f*translateX, cy+f*translateY );
-					//t.setTranslate( cx+f*translateX, cy+f*translateY);
-					//t.translate( cx+f*translateX, cy+f*translateY );
 					float s = 1-zoom*f;
-					//t.setScale( s, s);
 					t.preScale(s, s);
-					//t.scale( s, s );
 					
 					if ( rotation != 0 ){
 						t.preRotate(-rotation*f);
-						//t.setRotate( -rotation*f );
-						//t.rotate( -rotation*f );
 					}
 						
 					t.preTranslate( -cx, -cy );
-					//t.setTranslate( -cx, -cy );
-					//t.translate( -cx, -cy );
 					t.mapPoints(p,p);
-					//t.mapVectors(p,p);
-					//t.transform( p, p );
 					newX = (int)p[0];
 					newY = (int)p[1];
-					//Log.d("DEBUG","newX = "+newX+"  newY = "+newY);
-					//newX = (int)p.x;
-					//newY = (int)p.y;
 
 					if (newX < 0 || newX >= width) {
 						if ( wrapEdges )

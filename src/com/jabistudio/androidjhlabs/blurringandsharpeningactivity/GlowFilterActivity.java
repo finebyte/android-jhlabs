@@ -4,9 +4,11 @@ import com.jabistudio.androidjhlabs.SuperFilterActivity;
 import com.jabistudio.androidjhlabs.filter.DespeckleFilter;
 import com.jabistudio.androidjhlabs.filter.GaussianFilter;
 import com.jabistudio.androidjhlabs.filter.GlowFilter;
+import com.jabistudio.androidjhlabs.filter.HighPassFilter;
 import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -35,6 +37,9 @@ public class GlowFilterActivity extends SuperFilterActivity implements OnSeekBar
     
     private int mRadiusValue;
     private int mAmountValue;
+    
+    private ProgressDialog mProgressDialog;
+    private int[] mColors;
     
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -98,17 +103,30 @@ public class GlowFilterActivity extends SuperFilterActivity implements OnSeekBar
         final int width = mOriginalImageView.getDrawable().getIntrinsicWidth();
         final int height = mOriginalImageView.getDrawable().getIntrinsicHeight();
         
-        int[] colors = AndroidUtils.drawableToIntArray(mOriginalImageView.getDrawable());
+        mColors = AndroidUtils.drawableToIntArray(mOriginalImageView.getDrawable());
+        mProgressDialog = ProgressDialog.show(this, "", "Wait......");
         
-        GlowFilter filter = new GlowFilter();
-        //Amount is 0~1 value
-        filter.setAmount(getAmout(mAmountValue));
-        filter.setRadius(mRadiusValue);
+        Thread thread = new Thread(){
+            public void run() {
+                GlowFilter filter = new GlowFilter();
+                //Amount is 0~1 value
+                filter.setAmount(getAmout(mAmountValue));
+                filter.setRadius(mRadiusValue);
 
-        colors = filter.filter(colors, width, height);
-        
-        setModifyView(colors, width, height);
+                mColors = filter.filter(mColors, width, height);
+                GlowFilterActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setModifyView(mColors, width, height);
+                    }
+                });
+                mProgressDialog.dismiss();
+            }
+        };
+        thread.setDaemon(true);
+        thread.start();      
     }
+    
     private float getAmout(int value){
         float retValue = 0;
         retValue = (float)(value / 100f);
