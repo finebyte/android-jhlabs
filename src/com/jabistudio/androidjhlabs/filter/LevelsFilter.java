@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
+
 import android.graphics.Rect;
 
 /**
@@ -70,7 +72,6 @@ public class LevelsFilter extends WholeImageFilter {
 		int i, j;
 
 		if (histogram.getNumSamples() > 0) {
-			float scale = 255.0f / histogram.getNumSamples();
 			lut = new int[3][256];
 
             float low = lowLevel * 255;

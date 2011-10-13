@@ -16,73 +16,73 @@
         <activity android:name=".FilterListActivity"/>
         
         <!-- Color Adjustment Filters Activity -->
-		<activity android:name=".coloradjustmentfilteractivity.ChannelMixFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.ContrastFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.CurvesFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.DiffusionFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.DitherFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.ExposureFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.GainFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.GammaFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.GrayFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.GrayscaleFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.HSBAdjustFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.InvertAlphaFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.InvertFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.LevelsFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.LookupFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.MapColorsFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.MaskFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.PosterizeFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.QuantizeFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.RescaleFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.RGBAdjustFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.SolarizeFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.ThresholdFilterActivity"/>
-		<activity android:name=".coloradjustmentfilteractivity.TritoneFilterActivity"/>
+		<activity android:name=".coloradjustmentfilteractivity.ChannelMixFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.ContrastFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.CurvesFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.DiffusionFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.DitherFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.ExposureFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.GainFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.GammaFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.GrayFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.GrayscaleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.HSBAdjustFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.InvertAlphaFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.InvertFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.LevelsFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.LookupFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.MapColorsFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.MaskFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.PosterizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.QuantizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.RescaleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.RGBAdjustFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.SolarizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.ThresholdFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".coloradjustmentfilteractivity.TritoneFilterActivity" android:theme="@android:style/Theme.Light"/>
 		
 		<!-- Distortion and Warping Filters Activity -->
-		<activity android:name=".distortionandwarpingactivity.BicubicScaleFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.CircleFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.CropFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.DiffuseFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.DisplaceFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.DissolveFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.FieldWarpFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.FlipFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.KaleidoscopeFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.MarbleFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.MirrorFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.OffsetFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.PerspectiveFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.PinchFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.RippleFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.RotateFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.ScaleFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.ShearFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.SphereFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.SwimFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.TileImageFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.TwirlFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.WarpFilterActivity"/>
-		<activity android:name=".distortionandwarpingactivity.WaterFilterActivity"/>
+		<activity android:name=".distortionandwarpingactivity.BicubicScaleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.CircleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.CropFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.DiffuseFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.DisplaceFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.DissolveFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.FieldWarpFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.FlipFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.KaleidoscopeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.MarbleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.MirrorFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.OffsetFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.PerspectiveFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.PinchFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.RippleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.RotateFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.ScaleFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.ShearFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.SphereFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.SwimFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.TileImageFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.TwirlFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.WarpFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.WaterFilterActivity" android:theme="@android:style/Theme.Light"/>
 		
 		<!-- Effects Filters Activity -->
-		<activity android:name=".effectsactivity.BlockFilterActivity"/>
-		<activity android:name=".effectsactivity.BorderFilterActivity"/>
-		<activity android:name=".effectsactivity.ChromeFilterActivity"/>
-		<activity android:name=".effectsactivity.ColorHalftoneFilterActivity"/>
-		<activity android:name=".effectsactivity.CrystallizeFilterActivity"/>
-		<activity android:name=".effectsactivity.EmbossFilterActivity"/>
-		<activity android:name=".effectsactivity.FeedbackFilterActivity"/>
-		<activity android:name=".effectsactivity.HalftoneFilterActivity"/>
-		<activity android:name=".effectsactivity.LightFilterActivity"/>
-		<activity android:name=".effectsactivity.NoiseFilterActivity"/>
-		<activity android:name=".effectsactivity.PointillizeFilterActivity"/>
-		<activity android:name=".effectsactivity.ShadowFilterActivity"/>
-		<activity android:name=".effectsactivity.ShapeFilterActivity"/>
-		<activity android:name=".effectsactivity.StampFilterActivity"/>
-		<activity android:name=".effectsactivity.WeaveFilterActivity"/>
+		<activity android:name=".effectsactivity.BlockFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.BorderFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.ChromeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.ColorHalftoneFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.CrystallizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.EmbossFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.FeedbackFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.HalftoneFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.LightFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.NoiseFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.PointillizeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.ShadowFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.ShapeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.StampFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.WeaveFilterActivity" android:theme="@android:style/Theme.Light"/>
 		
 		<!-- Blurring and Sharpening Filters Activity -->
 		<activity android:name=".blurringandsharpeningactivity.BlurFilterActivity" android:theme="@android:style/Theme.Light"/>
@@ -106,15 +106,15 @@
 		<activity android:name=".blurringandsharpeningactivity.VariableBlurFilterActivity" android:theme="@android:style/Theme.Light"/>
 		
 		<!-- Edge Detection Activity -->
-		<activity android:name=".edgedetectionactivity.DoGFilterActivity"/>
-		<activity android:name=".edgedetectionactivity.EdgeFilterActivity"/>
-		<activity android:name=".edgedetectionactivity.LaplaceFilterActivity"/>
+		<activity android:name=".edgedetectionactivity.DoGFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".edgedetectionactivity.EdgeFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".edgedetectionactivity.LaplaceFilterActivity" android:theme="@android:style/Theme.Light"/>
 		
 		<!-- Transitions Activity -->
-		<activity android:name=".transitionsactivity.BlurTransitionActivity"/>
-		<activity android:name=".transitionsactivity.GradientWipeFilterActivity"/>
+		<activity android:name=".transitionsactivity.BlurTransitionActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".transitionsactivity.GradientWipeFilterActivity" android:theme="@android:style/Theme.Light"/>
 		
 		<!-- Alpha Channel Activity -->
-		<activity android:name=".alphachannelactivity.OpacityFilterActivity"/>
+		<activity android:name=".alphachannelactivity.OpacityFilterActivity" android:theme="@android:style/Theme.Light"/>
     </application>
 </manifest>

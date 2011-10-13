@@ -20,7 +20,7 @@ import android.graphics.Color;
 
 public class HSBAdjustFilter extends PointFilter {
 	
-	public float hFactor, sFactor, bFactor;
+    private float hFactor, sFactor, bFactor;
 	private float[] hsb = new float[3];
 	
 	public HSBAdjustFilter() {
@@ -64,7 +64,6 @@ public class HSBAdjustFilter extends PointFilter {
 		int g = (rgb >> 8) & 0xff;
 		int b = rgb & 0xff;
 		Color.RGBToHSV(r, g, b, hsb);
-		//Color.RGBtoHSB(r, g, b, hsb);
 		hsb[0] += hFactor;
 		while (hsb[0] < 0)
 			hsb[0] += Math.PI*2;
@@ -79,7 +78,6 @@ public class HSBAdjustFilter extends PointFilter {
 		else if (hsb[2] > 1.0)
 			hsb[2] = 1.0f;
 		rgb = Color.HSVToColor(hsb);
-		//rgb = Color.HSBtoRGB(hsb[0], hsb[1], hsb[2]);
 		return a | (rgb & 0xffffff);
 	}
 

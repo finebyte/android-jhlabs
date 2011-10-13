@@ -4,8 +4,8 @@ import com.jabistudio.androidjhlabs.SuperFilterActivity;
 import com.jabistudio.androidjhlabs.R;
 import com.jabistudio.androidjhlabs.filter.BlurFilter;
 import com.jabistudio.androidjhlabs.filter.ConvolveFilter;
+import com.jabistudio.androidjhlabs.filter.Kernel;
 import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
-import com.jabistudio.androidjhlabs.filter.util.Kernel;
 
 import android.app.Activity;
 import android.graphics.Bitmap;

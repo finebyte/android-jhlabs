@@ -17,6 +17,7 @@ limitations under the License.
 package com.jabistudio.androidjhlabs.filter;
 
 import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
 
 /**
  * A filter which performs a tritone conversion on an image. Given three colors for shadows, midtones and highlights,

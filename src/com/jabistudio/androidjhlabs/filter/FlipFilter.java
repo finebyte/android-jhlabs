@@ -52,8 +52,6 @@ public class FlipFilter {
 	public static final int FLIP_180 = 6;
 
 	private int operation;
-	private int width, height;
-	private int newWidth, newHeight;
 
     /**
      * Construct a FlipFilter which flips horizontally and vertically.

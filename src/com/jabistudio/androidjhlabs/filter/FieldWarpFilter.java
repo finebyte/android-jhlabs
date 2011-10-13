@@ -51,7 +51,6 @@ public class FieldWarpFilter extends TransformFilter {
 	private Line[] inLines;
 	private Line[] outLines;
 	private Line[] intermediateLines;
-	private float width, height;
 
 	public FieldWarpFilter() {
 	}
@@ -150,20 +149,14 @@ public class FieldWarpFilter extends TransformFilter {
 
 			sumX += (u - x) * weight;
 			sumY += (v - y) * weight;
-//if (x % 10 == 0&&y == 20)System.out.println("distance="+distance+" weight="+weight+" sumX="+sumX+" sumY="+sumY+" u="+u+" v="+v);
 			totalWeight += weight;
 		}
 
-//		out[0] = ImageMath.clamp(x + sumX / totalWeight + 0.5f, 0, width-1);
-//		out[1] = ImageMath.clamp(y + sumY / totalWeight + 0.5f, 0, height-1);
 		out[0] = x + sumX / totalWeight + 0.5f;
 		out[1] = y + sumY / totalWeight + 0.5f;
 	}
 
     public int[] filter( int[] src ,int w, int h) {
-		this.width = w;
-		this.height = h;
-		
 		if ( inLines != null && outLines != null ) {
 			intermediateLines = new Line[inLines.length];
 			for (int line = 0; line < inLines.length; line++) {

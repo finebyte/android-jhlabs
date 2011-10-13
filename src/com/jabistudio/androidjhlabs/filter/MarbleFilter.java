@@ -18,6 +18,7 @@ package com.jabistudio.androidjhlabs.filter;
 
 import com.jabistudio.androidjhlabs.filter.math.ImageMath;
 import com.jabistudio.androidjhlabs.filter.math.Noise;
+import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
 
 /**
  * This filter applies a marbling effect to an image, displacing pixels by random amounts.

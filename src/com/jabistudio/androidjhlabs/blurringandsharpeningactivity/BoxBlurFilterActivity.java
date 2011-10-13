@@ -4,9 +4,11 @@ import com.jabistudio.androidjhlabs.SuperFilterActivity;
 import com.jabistudio.androidjhlabs.R;
 import com.jabistudio.androidjhlabs.filter.BlurFilter;
 import com.jabistudio.androidjhlabs.filter.BoxBlurFilter;
+import com.jabistudio.androidjhlabs.filter.GaussianFilter;
 import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -41,6 +43,9 @@ public class BoxBlurFilterActivity extends SuperFilterActivity implements OnSeek
     private int mHRadiusValue;
     private int mVRadiusValue;
     private int mRadiusValue;
+    
+    private ProgressDialog mProgressDialog;
+    private int[] mColors;
     
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,16 +130,29 @@ public class BoxBlurFilterActivity extends SuperFilterActivity implements OnSeek
         final int width = mOriginalImageView.getDrawable().getIntrinsicWidth();
         final int height = mOriginalImageView.getDrawable().getIntrinsicHeight();
         
-        int[] colors = AndroidUtils.drawableToIntArray(mOriginalImageView.getDrawable());
+        mColors = AndroidUtils.drawableToIntArray(mOriginalImageView.getDrawable());
+        mProgressDialog = ProgressDialog.show(this, "", "Wait......");
         
-        BoxBlurFilter filter = new BoxBlurFilter();
-        filter.setHRadius(mHRadiusValue);
-        filter.setVRadius(mVRadiusValue);
-        if(mHRadiusValue == 0 && mVRadiusValue == 0){
-            filter.setRadius(mRadiusValue);
-        }
-        colors = filter.filter(colors, width, height);
-        
-        setModifyView(colors, width, height);
+        Thread thread = new Thread(){
+            public void run() {
+                BoxBlurFilter filter = new BoxBlurFilter();
+                filter.setHRadius(mHRadiusValue);
+                filter.setVRadius(mVRadiusValue);
+                if(mHRadiusValue == 0 && mVRadiusValue == 0){
+                    filter.setRadius(mRadiusValue);
+                }
+                mColors = filter.filter(mColors, width, height);
+
+                BoxBlurFilterActivity.this.runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        setModifyView(mColors, width, height);
+                    }
+                });
+                mProgressDialog.dismiss();
+            }
+        };
+        thread.setDaemon(true);
+        thread.start();    
     }
 }
