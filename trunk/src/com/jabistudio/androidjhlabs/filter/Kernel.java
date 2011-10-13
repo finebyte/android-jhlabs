@@ -1,4 +1,4 @@
-package com.jabistudio.androidjhlabs.filter.util;
+package com.jabistudio.androidjhlabs.filter;
 
 public class Kernel {
 	private int mWidth;

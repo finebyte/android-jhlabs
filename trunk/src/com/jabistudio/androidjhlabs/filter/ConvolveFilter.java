@@ -17,10 +17,7 @@ limitations under the License.
 package com.jabistudio.androidjhlabs.filter;
 
 import com.jabistudio.androidjhlabs.filter.math.ImageMath;
-import com.jabistudio.androidjhlabs.filter.util.Kernel;
 import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
-
-import android.util.Log;
 
 /**
  * A filter which applies a convolution kernel to an image.

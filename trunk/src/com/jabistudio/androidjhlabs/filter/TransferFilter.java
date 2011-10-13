@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
+
 
 public abstract class TransferFilter extends PointFilter {
 

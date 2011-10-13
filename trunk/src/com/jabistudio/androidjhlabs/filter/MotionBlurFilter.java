@@ -17,6 +17,7 @@ limitations under the License.
 package com.jabistudio.androidjhlabs.filter;
 
 import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
 
 import android.graphics.Bitmap;
 import android.graphics.Matrix;

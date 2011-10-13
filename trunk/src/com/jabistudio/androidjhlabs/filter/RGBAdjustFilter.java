@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
+
 public class RGBAdjustFilter extends PointFilter {
 	
 	public float rFactor, gFactor, bFactor;

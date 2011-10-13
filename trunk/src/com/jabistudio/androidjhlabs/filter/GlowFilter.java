@@ -16,6 +16,8 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
+import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
+
 /**
  * A filter which adds Gaussian blur to an image, producing a glowing effect.
  * @author Jerry Huxtable
