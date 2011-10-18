@@ -1,5 +1,15 @@
 = Task Status History Table =
 
+ == Approx table ==
+|| *category* || *complete* || *total* || 
+|| Color Adjustment || 19 || 24 || 
+|| Distortion and Warping || 0 || 25 || 
+|| Effects || 4 || 15 || 
+|| Blurring and Sharpening || 16 || 20 || 
+|| Edge || 3 || 3 || 
+|| Transitions || 0 || 2 || 
+|| Alpha Channel || 0 || 1 || 
+
  === Color Adjustment Filters ===
 || *filter* ||  *Completion* || *description* ||
 || channel mix filter || 0 || Mixes the RGB channels ||
@@ -29,7 +39,7 @@
 
  === Distortion and Warping Filters ===
 || *filter* ||  *Completion* || *description* ||
-|| bicubic scale filter ||  || Scaling with bicubic interpolation ||
+|| bicubic scale filter || X || Scaling with bicubic interpolation ||
 || circle filter || X || Wrap an image around a circle ||
 || crop filter || X || Crop an area from an image ||
 || diffuse filter || X || Diffuse the pixels of an image ||
