@@ -2,27 +2,27 @@
 
  - Color Adjustment Filters 
 || *filter* ||  *Completion* || *description* ||
-|| channelMixFilter || 0 || Mixes the RGB channels ||
-|| contrastFilter || 0 || Adjusts brightness and contrast ||
-|| *CurvesFilter* || X || Apply adjustment curves to an image ||
-|| *DiffusionFilter* || 0 || Error-diffusion dithering ||
-|| *DitherFilter* || X || Ordered dithering ||
-|| *ExposureFilter* || 0 || Change the exposure of an image ||
-|| *GainFilter* || 0 || Adjusts gain and bias ||
-|| *GammaFilter* || 0 || Adjusts image gamma ||
-|| *GrayFilter* || 0 || Grays out an image ||
-|| *GrayscaleFilter* || 0 || Converts to grayscale ||
-|| *HSBAdjustFilter* || 0 || Adjusts hue, saturation and brightness ||
-|| *InvertAlphaFilter* || 0 || Inverts the alpha channel ||
-|| *InvertFilter* || 0 || Inverts image colors ||
-|| *LevelsFilter* || 0 || Adjust image levels ||
-|| *LookupFilter* || X || Change image colors with a lookup table ||
-|| *MapColorsFilter* || X || Replace a color ||
-|| *MaskFilter* || X || Channel masking ||
-|| *PosterizeFilter* || 0 || Posterization ||
-|| *QuantizeFilter* || 0 || Quantize an image to 256 colors for, say, GIF export ||
-|| *RescaleFilter* || 0 || Multiplies colors by a scaling factor ||
-|| *RGBAdjustFilter* || 0 || Adjusts red, green and blue levels ||
-|| *SolarizeFilter* || 0 || Solarization ||
-|| *ThresholdFilter* || 0 || Thresholding ||
-|| *TritoneFilter* || 0 || Create a tri-tone image ||
+|| channel mix filter || 0 || Mixes the RGB channels ||
+|| contrast filter || 0 || Adjusts brightness and contrast ||
+|| curves filter || X || Apply adjustment curves to an image ||
+|| diffusion filter || 0 || Error-diffusion dithering ||
+|| dither filter || X || Ordered dithering ||
+|| exposure filter || 0 || Change the exposure of an image ||
+|| gain filter || 0 || Adjusts gain and bias ||
+|| gamma filter || 0 || Adjusts image gamma ||
+|| gray filter || 0 || Grays out an image ||
+|| grayscale filter || 0 || Converts to grayscale ||
+|| HSB adjust filter || 0 || Adjusts hue, saturation and brightness ||
+|| invert alpha filter || 0 || Inverts the alpha channel ||
+|| invert filter || 0 || Inverts image colors ||
+|| levels filter || 0 || Adjust image levels ||
+|| lookup filter || X || Change image colors with a lookup table ||
+|| map colors filter || X || Replace a color ||
+|| mask filter || X || Channel masking ||
+|| posterize filter || 0 || Posterization ||
+|| quantize filter || 0 || Quantize an image to 256 colors for, say, GIF export ||
+|| rescale filter || 0 || Multiplies colors by a scaling factor ||
+|| RGB adjust filter || 0 || Adjusts red, green and blue levels ||
+|| solarize filter || 0 || Solarization ||
+|| threshold filter || 0 || Thresholding ||
+|| tritone filter || 0 || Create a tri-tone image ||
