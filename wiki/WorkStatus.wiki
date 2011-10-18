@@ -2,7 +2,7 @@
 
  - Color Adjustment Filters 
 || filter ||  Completion || description ||
-|| '''ChannelMixFilter''' || 0 || Mixes the RGB channels ||
+|| ChannelMixFilter || 0 || Mixes the RGB channels ||
 || ContrastFilter || 0 || Adjusts brightness and contrast ||
 || CurvesFilter || X || Apply adjustment curves to an image ||
 || DiffusionFilter || 0 || Error-diffusion dithering ||
