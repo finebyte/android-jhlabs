@@ -1,6 +1,6 @@
 = Task Status History Table =
 
- - Color Adjustment Filters 
+ === Color Adjustment Filters ===
 || *filter* ||  *Completion* || *description* ||
 || channel mix filter || 0 || Mixes the RGB channels ||
 || contrast filter || 0 || Adjusts brightness and contrast ||
@@ -26,3 +26,87 @@
 || solarize filter || 0 || Solarization ||
 || threshold filter || 0 || Thresholding ||
 || tritone filter || 0 || Create a tri-tone image ||
+
+ === Distortion and Warping Filters ===
+|| *filter* ||  *Completion* || *description* ||
+|| bicubic scale filter ||  || Scaling with bicubic interpolation ||
+|| circle filter || X || Wrap an image around a circle ||
+|| crop filter || X || Crop an area from an image ||
+|| diffuse filter || X || Diffuse the pixels of an image ||
+|| displace filter || X || A glass distortion effect ||
+|| dissolve filter || X || Dissolves an image by turning random pixels transparent ||
+|| field warp filter || X || Warp images using a field warp algorithm ||
+|| flip filter || X || Flip and rotate images ||
+|| kaleidoscope filter || X || A kaleidoscope effect ||
+|| marble filter || X || A marbling effect ||
+|| mirror filter || X || Mirror an image ||
+|| offset filter || X || Offset an image for tiling ||
+|| perspective filter || X || Perspective distortion ||
+|| pinch filter || X || Whirl-and-pinch distortion ||
+|| polar filter || X || Convert to and from polar coordinates ||
+|| ripple filter || X || Ripple distortion ||
+|| rotate filter || X || Rotate an image ||
+|| scale filter || X || Scale an image with area-averaging ||
+|| shear filter || X || Shear an image ||
+|| sphere filter || X || Lens distortion ||
+|| swim filter || X || An "underwater" distortion effect ||
+|| tile image filter || X || Tile an image into a larger image ||
+|| twirl filter || X || Distort an image by twisting ||
+|| warp filter || X || A general grid image warp ||
+|| water filter || X || Simulate water ripples ||
+
+ === Effects Filters ===
+|| *filter* ||  *Completion* || *description* ||
+|| block filter || 0 || Mosaic or pixellate an image ||
+|| border filter || X || Add a border ||
+|| chrome filter || X || Simulate chrome ||
+|| color halftone filter || 0 || Color halftoning effect. ||
+|| crystallize filter || 0 || Make an image look like stained glass ||
+|| emboss filter || X || Simple embossing ||
+|| feedback filter || X || A video feedback effect ||
+|| halftone filter || X || Simple halftoning ||
+|| light filter || X || Simulate lights on an bump-mapped image ||
+|| noise filter || X || Add noise ||
+|| pointillize filter || X || Draw an image as colored spots ||
+|| shadow filter || X || Create drop shadows ||
+|| shape filter || X || Create bump maps for lighting ||
+|| stamp filter || 0 || A rubber stamp effect ||
+|| weave filter || X || A woven image effect ||
+
+ === Blurring and Sharpening Filters ===
+|| *filter* ||  *Completion* || *description* ||
+|| blur filter || 0 || Simple blur ||
+|| box blur filter || 0 || Box blur ||
+|| bump filter || 0 || Edge embossing ||
+|| convolve filter || 0 || General convolution ||
+|| despeckle filter || 0 || De-speckle an image ||
+|| gaussian filter || 0 || Gaussian blur ||
+|| glow filter || 0 || Add a glow to an image ||
+|| highpass filter || 0 || Remove low spatial frequencies ||
+|| lensblur filter || X || Simulate camera lens blur ||
+|| maximum filter || 0 || Dilation ||
+|| median filter || 0 || Median filter for noise reduction ||
+|| minimum filter || 0 || Erosion ||
+|| motion blur filter || X || Simulate motion blur ||
+|| oil filter || 0 || Oil painting effect ||
+|| rays filter || X || Create light rays ||
+|| reduce noise filter || 0 || Remove noise from an image ||
+|| sharpen filter || 0 || Simple sharpening ||
+|| smart blur filter || 0 || A thresholded blur for ironing out wrinkles ||
+|| unsharp filter || 0 || Sharpening by unsharp masking ||
+|| variable blur filter || X || Blurring with a variable radius taken from a mask ||
+
+ === Edge Detection ===
+|| *filter* ||  *Completion* || *description* ||
+|| dog filter || 0 || Edge detection by Difference of Gaussians ||
+|| edge filter || 0 || Edge detection ||
+|| laplace filter || 0 || Edge detection by Laplace operator ||
+
+ === Transitions ===
+|| *filter* ||  *Completion* || *description* ||
+|| blur transition || X || Transition with a blur ||
+|| gradient wipe filter || X || Use a mask to dissolve one image into another ||
+
+ === Alpha Channel Filters ===
+|| *filter* ||  *Completion* || *description* ||
+|| opacity filter || X || Change image opacity ||
