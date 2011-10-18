@@ -3,6 +3,7 @@ package com.jabistudio.androidjhlabs.blurringandsharpeningactivity;
 import com.jabistudio.androidjhlabs.SuperFilterActivity;
 import com.jabistudio.androidjhlabs.filter.GaussianFilter;
 import com.jabistudio.androidjhlabs.filter.MotionBlurFilter;
+import com.jabistudio.androidjhlabs.filter.MotionBlurOp;
 import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
 
 import android.app.Activity;
@@ -18,19 +19,28 @@ import android.widget.SeekBar.OnSeekBarChangeListener;
 public class MotionBlurFilterActivity extends SuperFilterActivity implements OnSeekBarChangeListener{
     private static final String TITLE = "MotionBlur";
     
+    private static final String CENTERX_STRING = "CENTERX:";
+    private static final String CENTERY_STRING = "CENTERY:";
     private static final String ANGLE_STRING = "ANGLE:";
     private static final String DISTANCE_STRING = "DISTANCE:";
     private static final String ROTATION_STRING = "ROTATION:";
     private static final String ZOOM_STRING = "ZOOM:";
-    private static final int MAX_ANGLE_VALUE = 624;
-    private static final int MAX_ROTATION_VALUE = 157;
+    
     private static final int MAX_VALUE = 100;
+    private static final int MAX_ROTATION_VALUE = 360;
+    //private static final int MAX_VALUE = 100;
     
-    private static final int ANGLE_SEEKBAR_RESID = 21865;
-    private static final int DISTANCE_SEEKBAR_RESID = 21866;
-    private static final int ROTATION_SEEKBAR_RESID = 21867;
-    private static final int ZOOM_SEEKBAR_RESID = 21868;
+    private static final int CENTERX_SEEKBAR_RESID = 21865;
+    private static final int CENTERY_SEEKBAR_RESID = 21866;
+    private static final int ANGLE_SEEKBAR_RESID = 21867;
+    private static final int DISTANCE_SEEKBAR_RESID = 21868;
+    private static final int ROTATION_SEEKBAR_RESID = 21869;
+    private static final int ZOOM_SEEKBAR_RESID = 21870;
     
+    private SeekBar mCenterXSeekBar;
+    private TextView mCenterXTextView;
+    private SeekBar mCenterYSeekBar;
+    private TextView mCenterYTextView;
     private SeekBar mAngleSeekBar;
     private TextView mAngleTextView;
     private SeekBar mDistanceSeekBar;
@@ -40,6 +50,8 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
     private SeekBar mZoomSeekBar;
     private TextView mZoomTextView;
     
+    private int mCenterXValue;
+    private int mCenterYValue;
     private int mAngleValue;
     private int mDistanceValue;
     private int mRotationValue;
@@ -60,6 +72,30 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
      * @param mainLayout
      */
     private void filterSeekBarSetup(LinearLayout mainLayout){
+        mCenterXTextView = new TextView(this);
+        mCenterXTextView.setText(CENTERX_STRING+mCenterXValue);
+        mCenterXTextView.setTextSize(TITLE_TEXT_SIZE);
+        mCenterXTextView.setTextColor(Color.BLACK);
+        mCenterXTextView.setGravity(Gravity.CENTER);
+        
+        mCenterXSeekBar = new SeekBar(this);
+        mCenterXSeekBar.setOnSeekBarChangeListener(this);
+        mCenterXSeekBar.setId(CENTERX_SEEKBAR_RESID);
+        mCenterXSeekBar.setMax(MAX_VALUE);
+        mCenterXSeekBar.setProgress(MAX_VALUE/2);
+        
+        mCenterYTextView = new TextView(this);
+        mCenterYTextView.setText(CENTERY_STRING+mCenterYValue);
+        mCenterYTextView.setTextSize(TITLE_TEXT_SIZE);
+        mCenterYTextView.setTextColor(Color.BLACK);
+        mCenterYTextView.setGravity(Gravity.CENTER);
+        
+        mCenterYSeekBar = new SeekBar(this);
+        mCenterYSeekBar.setOnSeekBarChangeListener(this);
+        mCenterYSeekBar.setId(CENTERY_SEEKBAR_RESID);
+        mCenterYSeekBar.setMax(MAX_VALUE);
+        mCenterYSeekBar.setProgress(MAX_VALUE/2);
+        
         mAngleTextView = new TextView(this);
         mAngleTextView.setText(ANGLE_STRING+mAngleValue);
         mAngleTextView.setTextSize(TITLE_TEXT_SIZE);
@@ -69,7 +105,7 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
         mAngleSeekBar = new SeekBar(this);
         mAngleSeekBar.setOnSeekBarChangeListener(this);
         mAngleSeekBar.setId(ANGLE_SEEKBAR_RESID);
-        mAngleSeekBar.setMax(MAX_ANGLE_VALUE);
+        mAngleSeekBar.setMax(MAX_VALUE);
         
         mDistanceTextView = new TextView(this);
         mDistanceTextView.setText(DISTANCE_STRING+mDistanceValue);
@@ -92,6 +128,7 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
         mRotationSeekBar.setOnSeekBarChangeListener(this);
         mRotationSeekBar.setId(ROTATION_SEEKBAR_RESID);
         mRotationSeekBar.setMax(MAX_ROTATION_VALUE);
+        mRotationSeekBar.setProgress(MAX_ROTATION_VALUE/2);
         
         mZoomTextView = new TextView(this);
         mZoomTextView.setText(ZOOM_STRING+mZoomValue);
@@ -104,6 +141,10 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
         mZoomSeekBar.setId(ZOOM_SEEKBAR_RESID);
         mZoomSeekBar.setMax(MAX_VALUE);
         
+        mainLayout.addView(mCenterXTextView);
+        mainLayout.addView(mCenterXSeekBar);
+        mainLayout.addView(mCenterYTextView);
+        mainLayout.addView(mCenterYSeekBar);
         mainLayout.addView(mAngleTextView);
         mainLayout.addView(mAngleSeekBar);
         mainLayout.addView(mDistanceTextView);
@@ -117,6 +158,14 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
     @Override
     public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
         switch(seekBar.getId()){
+        case CENTERX_SEEKBAR_RESID:
+            mCenterXValue = progress;
+            mCenterXTextView.setText(CENTERX_STRING+getCenterAndZoom(mCenterXValue));
+            break;
+        case CENTERY_SEEKBAR_RESID:
+            mCenterYValue = progress;
+            mCenterYTextView.setText(CENTERY_STRING+getCenterAndZoom(mCenterYValue));
+            break;
         case ANGLE_SEEKBAR_RESID:
             mAngleValue = progress;
             mAngleTextView.setText(ANGLE_STRING+getAngle(mAngleValue));
@@ -131,7 +180,7 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
             break;
         case ZOOM_SEEKBAR_RESID:
             mZoomValue = progress;
-            mZoomTextView.setText(ZOOM_STRING+getDistance(mZoomValue));
+            mZoomTextView.setText(ZOOM_STRING+getCenterAndZoom(mZoomValue));
             break;
         }
     }
@@ -150,11 +199,13 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
         
         Thread thread = new Thread(){
             public void run() {
-                MotionBlurFilter filter = new MotionBlurFilter();
+                MotionBlurOp filter = new MotionBlurOp();
+                filter.setCentreX(getCenterAndZoom(mCenterXValue));
+                filter.setCentreY(getCenterAndZoom(mCenterYValue));
                 filter.setAngle(getAngle(mAngleValue));
                 filter.setDistance(mDistanceValue);
                 filter.setRotation(getRotation(mRotationValue));
-                filter.setZoom(getDistance(mZoomValue));
+                filter.setZoom(getCenterAndZoom(mZoomValue));
 
                 mColors = filter.filter(mColors, width, height);
                 MotionBlurFilterActivity.this.runOnUiThread(new Runnable() {
@@ -170,15 +221,21 @@ public class MotionBlurFilterActivity extends SuperFilterActivity implements OnS
         thread.start();        
     }
     
+    private float getCenterAndZoom(int value){
+        float retValue = 0;
+        retValue = (float)(value / 100f);
+        return retValue;
+    }
+    
     private float getAngle(int value){
         float retValue = 0;
         retValue = (float)(value / 100f);
         return retValue;
     }
     
-    private float getRotation(int value){
-        float retValue = 0;
-        retValue = (float)(value / 100f);
+    private int getRotation(int value){
+        int retValue = 0;
+        retValue = (value - 180);
         return retValue;
     }
     
