@@ -221,4 +221,23 @@ public class PixelUtils {
 		return (a1 << 24) | (r1 << 16) | (g1 << 8) | b1;
 	}
 	
+	public static void getRGB(int[] src, int x, int y, int w, int h, int scanWidth, int[] pixel){
+        int pixelIndex = 0;
+        for ( int yi = y; yi < y + h; yi++ ) {
+            for ( int xi = x; xi < x + w; xi++ ) {
+                pixel[pixelIndex] = src[xi + (yi * scanWidth)];
+                pixelIndex++;
+            }
+        }
+    }
+    
+	public static void setRGB(int[] dst, int x, int y, int w, int h, int scanWidth, int[] pixel){
+        int pixelIndex = 0;
+        for ( int yi = y; yi < y + h; yi++ ) {
+            for ( int xi = x; xi < x + w; xi++ ) {
+                dst[xi + (yi * scanWidth)] = pixel[pixelIndex];
+                pixelIndex++;
+            }
+        }
+    }
 }
