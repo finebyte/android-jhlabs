@@ -3,9 +3,9 @@
  == Approx table ==
 || *category* || *complete* || *total* || 
 || Color Adjustment || 19 || 24 || 
-|| Distortion and Warping || 0 || 25 || 
+|| Distortion and Warping || 10 || 25 || 
 || Effects || 4 || 15 || 
-|| Blurring and Sharpening || 16 || 20 || 
+|| Blurring and Sharpening || 17 || 20 || 
 || Edge || 3 || 3 || 
 || Transitions || 0 || 2 || 
 || Alpha Channel || 0 || 1 || 
@@ -42,26 +42,26 @@
 || bicubic scale filter || X || Scaling with bicubic interpolation ||
 || circle filter || X || Wrap an image around a circle ||
 || crop filter || X || Crop an area from an image ||
-|| diffuse filter || X || Diffuse the pixels of an image ||
+|| diffuse filter || 0 || Diffuse the pixels of an image ||
 || displace filter || X || A glass distortion effect ||
-|| dissolve filter || X || Dissolves an image by turning random pixels transparent ||
+|| dissolve filter || 0 || Dissolves an image by turning random pixels transparent ||
 || field warp filter || X || Warp images using a field warp algorithm ||
-|| flip filter || X || Flip and rotate images ||
-|| kaleidoscope filter || X || A kaleidoscope effect ||
-|| marble filter || X || A marbling effect ||
+|| flip filter || 0 || Flip and rotate images ||
+|| kaleidoscope filter || 0 || A kaleidoscope effect ||
+|| marble filter || 0 || A marbling effect ||
 || mirror filter || X || Mirror an image ||
-|| offset filter || X || Offset an image for tiling ||
+|| offset filter || 0 || Offset an image for tiling ||
 || perspective filter || X || Perspective distortion ||
 || pinch filter || X || Whirl-and-pinch distortion ||
-|| polar filter || X || Convert to and from polar coordinates ||
+|| polar filter || 0 || Convert to and from polar coordinates ||
 || ripple filter || X || Ripple distortion ||
 || rotate filter || X || Rotate an image ||
 || scale filter || X || Scale an image with area-averaging ||
-|| shear filter || X || Shear an image ||
-|| sphere filter || X || Lens distortion ||
+|| shear filter || 0 || Shear an image ||
+|| sphere filter || 0 || Lens distortion ||
 || swim filter || X || An "underwater" distortion effect ||
 || tile image filter || X || Tile an image into a larger image ||
-|| twirl filter || X || Distort an image by twisting ||
+|| twirl filter || 0 || Distort an image by twisting ||
 || warp filter || X || A general grid image warp ||
 || water filter || X || Simulate water ripples ||
 
@@ -97,7 +97,7 @@
 || maximum filter || 0 || Dilation ||
 || median filter || 0 || Median filter for noise reduction ||
 || minimum filter || 0 || Erosion ||
-|| motion blur filter || X || Simulate motion blur ||
+|| motion blur filter || 0 || Simulate motion blur ||
 || oil filter || 0 || Oil painting effect ||
 || rays filter || X || Create light rays ||
 || reduce noise filter || 0 || Remove noise from an image ||
