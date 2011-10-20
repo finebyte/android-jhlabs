@@ -11,7 +11,6 @@
         <item>Effects Filters</item>
         <item>Blurring and Sharpening Filters</item>
         <item>Edge Detection</item>
-        <item>Transitions</item>
         <item>Alpha Channel Filters</item>
     </string-array>
     
@@ -120,12 +119,6 @@
         <item>DoGFilter</item>
         <item>EdgeFilter</item>
         <item>LaplaceFilter</item>
-    </string-array>
-    
-    <string name="transitionsactivity">transitionsactivity</string>
-    <string-array name="transitions_filtername">
-        <item>BlurTransition</item>
-        <item>GradientWipeFilter</item>
     </string-array>
     
     <string name="alphachannelactivity">alphachannelactivity</string>

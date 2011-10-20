@@ -111,11 +111,7 @@
 		<activity android:name=".edgedetectionactivity.DoGFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".edgedetectionactivity.EdgeFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".edgedetectionactivity.LaplaceFilterActivity" android:theme="@android:style/Theme.Light"/>
-		
-		<!-- Transitions Activity -->
-		<activity android:name=".transitionsactivity.BlurTransitionActivity" android:theme="@android:style/Theme.Light"/>
-		<activity android:name=".transitionsactivity.GradientWipeFilterActivity" android:theme="@android:style/Theme.Light"/>
-		
+
 		<!-- Alpha Channel Activity -->
 		<activity android:name=".alphachannelactivity.OpacityFilterActivity" android:theme="@android:style/Theme.Light"/>
     </application>
