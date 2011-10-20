@@ -4,7 +4,7 @@
 || *category* || *complete* || *total* || 
 || Color Adjustment || 19 || 24 || 
 || Distortion and Warping || 10 || 25 || 
-|| Effects || 4 || 15 || 
+|| Effects || 5 || 16 || 
 || Blurring and Sharpening || 17 || 20 || 
 || Edge || 3 || 3 || 
 || Transitions || 0 || 2 || 
