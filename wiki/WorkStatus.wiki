@@ -71,6 +71,7 @@
 || border filter || X || Add a border ||
 || chrome filter || X || Simulate chrome ||
 || color halftone filter || 0 || Color halftoning effect. ||
+|| contour filter || 0 || contour effect. ||
 || crystallize filter || 0 || Make an image look like stained glass ||
 || emboss filter || X || Simple embossing ||
 || feedback filter || X || A video feedback effect ||
