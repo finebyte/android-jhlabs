@@ -17,6 +17,7 @@ limitations under the License.
 package com.jabistudio.androidjhlabs.filter;
 
 import com.jabistudio.androidjhlabs.filter.math.ImageMath;
+import com.jabistudio.androidjhlabs.filter.util.PixelUtils;
 
 import android.graphics.Rect;
 import android.util.Log;
@@ -131,11 +132,12 @@ public abstract class TransformFilter {
     public int[] filter( int[] src ,int w, int h) {
         int width = w;
         int height = h;
-
+        
+        Log.d("DEBUG","width = "+width+"  height = "+height);
+        
 		originalSpace = new Rect(0, 0, width, height);
 		transformedSpace = new Rect(0, 0, width, height);
 		transformSpace(transformedSpace);
-
 		int[] inPixels = src;
 		int[] dst = new int[width * height];
 		
@@ -154,7 +156,6 @@ public abstract class TransformFilter {
 		outX = transformedSpace.left;
 		outY = transformedSpace.top;
 		float[] out = new float[2];
-
 		for (int y = 0; y < outHeight; y++) {
 			for (int x = 0; x < outWidth; x++) {
 				transformInverse(outX+x, outY+y, out);
@@ -180,10 +181,8 @@ public abstract class TransformFilter {
 				}
 				outPixels[x] = ImageMath.bilinearInterpolate(xWeight, yWeight, nw, ne, sw, se);
 			}
-			int index = 0;			
-			for(int i=y*transformedSpace.right;i<(y*transformedSpace.right) + transformedSpace.right;++i){
-				dst[i] = outPixels[index];
-				index++;
+			if(y < height){
+			    PixelUtils.setLineRGB(dst, y, width, outPixels);
 			}
 		}
 		return dst;
@@ -248,11 +247,9 @@ public abstract class TransformFilter {
 					outPixels[x] = inPixels[i];
 				}
 			}
-			int index = 0;
-			for(int i=y*transformedSpace.right;i<(y*transformedSpace.right) + transformedSpace.right;++i){
-				dst[i] = outPixels[index];
-				index++;
-			}
+			if(y < height){
+                PixelUtils.setLineRGB(dst, y, width, outPixels);
+            }
 		}
 		return dst;
 	}

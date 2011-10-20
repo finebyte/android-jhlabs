@@ -240,4 +240,10 @@ public class PixelUtils {
             }
         }
     }
+	
+	public static void setLineRGB(int[] src, int y, int width, int[] pixel){
+        for(int i = 0;i < width;++i){
+            src[(width * y) + i] = pixel[i];
+        }
+    }
 }
