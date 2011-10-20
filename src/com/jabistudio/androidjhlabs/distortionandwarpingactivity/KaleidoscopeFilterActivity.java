@@ -24,6 +24,8 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
     private static final String RADIUS_STRING = "RADIUS:";
     private static final String SIDES_STRING = "SIDES:";
     private static final int MAX_VALUE = 100;
+    private static final int MAX_ANGLE_VALUE = 314;
+    private static final int SIDES_MAX_VALUE = 32;
     
     private static final int CENTERX_SEEKBAR_RESID = 21863;
     private static final int CENTERY_SEEKBAR_RESID = 21864;
@@ -76,6 +78,7 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
         mCenterXSeekBar.setOnSeekBarChangeListener(this);
         mCenterXSeekBar.setId(CENTERX_SEEKBAR_RESID);
         mCenterXSeekBar.setMax(MAX_VALUE);
+        mCenterXSeekBar.setProgress(MAX_VALUE/2);
         
         mCenterYTextView = new TextView(this);
         mCenterYTextView.setText(CENTERY_STRING+mCenterYValue);
@@ -87,6 +90,7 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
         mCenterYSeekBar.setOnSeekBarChangeListener(this);
         mCenterYSeekBar.setId(CENTERY_SEEKBAR_RESID);
         mCenterYSeekBar.setMax(MAX_VALUE);
+        mCenterYSeekBar.setProgress(MAX_VALUE/2);
         
         mAngleTextView = new TextView(this);
         mAngleTextView.setText(ANGLE_STRING+mAngleValue);
@@ -97,7 +101,8 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
         mAngleSeekBar = new SeekBar(this);
         mAngleSeekBar.setOnSeekBarChangeListener(this);
         mAngleSeekBar.setId(ANGLE_SEEKBAR_RESID);
-        mAngleSeekBar.setMax(MAX_VALUE);
+        mAngleSeekBar.setMax(MAX_ANGLE_VALUE);
+        mAngleSeekBar.setProgress(MAX_ANGLE_VALUE/2);
         
         mAngle2TextView = new TextView(this);
         mAngle2TextView.setText(ANGLE2_STRING+mAngle2Value);
@@ -108,7 +113,8 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
         mAngle2SeekBar = new SeekBar(this);
         mAngle2SeekBar.setOnSeekBarChangeListener(this);
         mAngle2SeekBar.setId(ANGLE2_SEEKBAR_RESID);
-        mAngle2SeekBar.setMax(MAX_VALUE);
+        mAngle2SeekBar.setMax(MAX_ANGLE_VALUE);
+        mAngle2SeekBar.setProgress(MAX_ANGLE_VALUE/2);
         
         mRadiusTextView = new TextView(this);
         mRadiusTextView.setText(RADIUS_STRING+mRadiusValue);
@@ -130,7 +136,7 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
         mSidesSeekBar = new SeekBar(this);
         mSidesSeekBar.setOnSeekBarChangeListener(this);
         mSidesSeekBar.setId(SIDES_SEEKBAR_RESID);
-        mSidesSeekBar.setMax(MAX_VALUE);
+        mSidesSeekBar.setMax(SIDES_MAX_VALUE);
         
         mainLayout.addView(mCenterXTextView);
         mainLayout.addView(mCenterXSeekBar);
@@ -151,19 +157,19 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
         switch(seekBar.getId()){
         case CENTERX_SEEKBAR_RESID:
             mCenterXValue = progress;
-            mCenterXTextView.setText(CENTERX_STRING+mCenterXValue);
+            mCenterXTextView.setText(CENTERX_STRING+getValue(mCenterXValue));
             break;
         case CENTERY_SEEKBAR_RESID:
             mCenterYValue = progress;
-            mCenterYTextView.setText(CENTERY_STRING+mCenterYValue);
+            mCenterYTextView.setText(CENTERY_STRING+getValue(mCenterYValue));
             break;
         case ANGLE_SEEKBAR_RESID:
             mAngleValue = progress;
-            mAngleTextView.setText(ANGLE_STRING+mAngleValue);
+            mAngleTextView.setText(ANGLE_STRING+getAngle(mAngleValue));
             break;
         case ANGLE2_SEEKBAR_RESID:
             mAngle2Value = progress;
-            mAngle2TextView.setText(ANGLE2_STRING+mAngle2Value);
+            mAngle2TextView.setText(ANGLE2_STRING+getAngle(mAngle2Value));
             break;
         case RADIUS_SEEKBAR_RESID:
             mRadiusValue = progress;
@@ -191,7 +197,12 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
         Thread thread = new Thread(){
             public void run() {
                 KaleidoscopeFilter filter = new KaleidoscopeFilter();
-                
+                filter.setCentreX(getValue(mCenterXValue));
+                filter.setCentreY(getValue(mCenterYValue));
+                filter.setAngle(getAngle(mAngleValue));
+                filter.setAngle2(getAngle(mAngle2Value));
+                filter.setRadius(mRadiusValue);
+                filter.setSides(mSidesValue);
                 mColors = filter.filter(mColors, width, height);
 
                 KaleidoscopeFilterActivity.this.runOnUiThread(new Runnable() {
@@ -205,5 +216,15 @@ public class KaleidoscopeFilterActivity extends SuperFilterActivity implements O
         };
         thread.setDaemon(true);
         thread.start();    
+    }
+    private float getAngle(int value){
+        float retValue = 0;
+        retValue = (float)((value - 157) / 100f);
+        return retValue;
+    }
+    private float getValue(int value){
+        float retValue = 0;
+        retValue = (float)(value / 100f);
+        return retValue;
     }
 }

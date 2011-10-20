@@ -56,6 +56,7 @@
 		<activity android:name=".distortionandwarpingactivity.OffsetFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".distortionandwarpingactivity.PerspectiveFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".distortionandwarpingactivity.PinchFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".distortionandwarpingactivity.PolarFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".distortionandwarpingactivity.RippleFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".distortionandwarpingactivity.RotateFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".distortionandwarpingactivity.ScaleFilterActivity" android:theme="@android:style/Theme.Light"/>
@@ -72,6 +73,7 @@
 		<activity android:name=".effectsactivity.BorderFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".effectsactivity.ChromeFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".effectsactivity.ColorHalftoneFilterActivity" android:theme="@android:style/Theme.Light"/>
+		<activity android:name=".effectsactivity.ContourFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".effectsactivity.CrystallizeFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".effectsactivity.EmbossFilterActivity" android:theme="@android:style/Theme.Light"/>
 		<activity android:name=".effectsactivity.FeedbackFilterActivity" android:theme="@android:style/Theme.Light"/>

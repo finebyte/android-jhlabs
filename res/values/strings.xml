@@ -59,6 +59,7 @@
         <item>OffsetFilter</item>
         <item>PerspectiveFilter</item>
         <item>PinchFilter</item>
+        <item>PolarFilter</item>
         <item>RippleFilter</item>
         <item>RotateFilter</item>
         <item>ScaleFilter</item>
@@ -77,6 +78,7 @@
         <item>BorderFilter</item>
         <item>ChromeFilter</item>
         <item>ColorHalftoneFilter</item>
+        <item>ContourFilter</item>
         <item>CrystallizeFilter</item>
         <item>EmbossFilter</item>
         <item>FeedbackFilter</item>
