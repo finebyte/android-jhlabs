@@ -7,8 +7,7 @@
 || Effects || 5 || 16 || 
 || Blurring and Sharpening || 17 || 20 || 
 || Edge || 3 || 3 || 
-|| Transitions || 0 || 2 || 
-|| Alpha Channel || 0 || 1 || 
+|| Alpha Channel || 1 || 1 || 
 
  === Color Adjustment Filters ===
 || *filter* ||  *Completion* || *description* ||
@@ -113,11 +112,6 @@
 || edge filter || 0 || Edge detection ||
 || laplace filter || 0 || Edge detection by Laplace operator ||
 
- === Transitions ===
-|| *filter* ||  *Completion* || *description* ||
-|| blur transition || X || Transition with a blur ||
-|| gradient wipe filter || X || Use a mask to dissolve one image into another ||
-
  === Alpha Channel Filters ===
 || *filter* ||  *Completion* || *description* ||
-|| opacity filter || X || Change image opacity ||
+|| opacity filter || 0 || Change image opacity ||
