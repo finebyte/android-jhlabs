@@ -1,5 +1,8 @@
 = Task Status History Table =
 
+ == Purpose ==
+ - Working 70% over jar relase and apk distribution
+
  == Approx table ==
 || *category* || *complete* || *total* || 
 || Color Adjustment || 19 || 24 || 
