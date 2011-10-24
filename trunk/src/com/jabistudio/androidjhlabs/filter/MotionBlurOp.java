@@ -16,8 +16,6 @@ limitations under the License.
 
 package com.jabistudio.androidjhlabs.filter;
 
-import java.awt.*;
-
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -206,11 +204,11 @@ public class MotionBlurOp {
         float scale = zoom;
         float rotate = rotation;
         float maxDistance = distance + Math.abs(rotation*imageRadius) + zoom*imageRadius;
-        Log.d("DEBUG","maxDistance = "+maxDistance);
+        //Log.d("DEBUG","maxDistance = "+maxDistance);
         int steps = log2((int)maxDistance);
-        Log.d("DEBUG","steps = "+steps);
-        Log.d("DEBUG","cx = "+cx+" cy = "+cy+" imageRadius = "+imageRadius+" translateX = "+translateX+" translateY = "+translateY);
-        Log.d("DEBUG","scale = "+scale+"rotate = "+rotate+" distance = "+distance);
+        //Log.d("DEBUG","steps = "+steps);
+        //Log.d("DEBUG","cx = "+cx+" cy = "+cy+" imageRadius = "+imageRadius+" translateX = "+translateX+" translateY = "+translateY);
+        //Log.d("DEBUG","scale = "+scale+"rotate = "+rotate+" distance = "+distance);
         
 		translateX /= maxDistance;
 		translateY /= maxDistance;
@@ -219,11 +217,14 @@ public class MotionBlurOp {
 		
         if ( steps == 0 ) {
             dstBitmap.getPixels(dst, 0, w, 0, 0, w, h);
+            srcBitmap.recycle();
+            tSrcBitmap.recycle();
+            dstBitmap.recycle();
             return dst;
         }
         
         Bitmap tmpBitmap = srcBitmap.copy(Bitmap.Config.ARGB_8888, true);
-        
+        Bitmap ti = null;
         Paint p = new Paint();
         p.setAlpha(128);
         p.setAntiAlias(true);
@@ -251,7 +252,7 @@ public class MotionBlurOp {
             //g.drawImage( dst, null, null );
             //g.dispose();
             //BufferedImage ti = dst;
-            Bitmap ti = dstBitmap;
+            ti = dstBitmap;
             dstBitmap = tmpBitmap;
             tmpBitmap = ti;
             tSrcBitmap = dstBitmap;
@@ -262,6 +263,15 @@ public class MotionBlurOp {
             rotate *= 2;
         }
         dstBitmap.getPixels(dst, 0, w, 0, 0, w, h);
+        
+        if(ti != null){
+            ti.recycle();
+        }
+        srcBitmap.recycle();
+        tSrcBitmap.recycle();
+        tmpBitmap.recycle();
+        dstBitmap.recycle();
+        
         return dst;
     }
     

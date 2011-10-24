@@ -1,7 +1,9 @@
 package com.jabistudio.androidjhlabs.filter.util;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.drawable.Drawable;
 import android.util.TypedValue;
@@ -65,4 +67,28 @@ public class AndroidUtils {
         
         return colors;
 	}
+	
+	  /** Get Bitmap's Width **/
+	 public static int getBitmapOfWidth(Resources res, int id){ 
+	    try {
+	        BitmapFactory.Options options = new BitmapFactory.Options(); 
+	        options.inJustDecodeBounds = true; 
+	        BitmapFactory.decodeResource(res, id, options);
+	        return options.outWidth; 
+	    } catch(Exception e) {
+	        return 0; 
+	    } 
+	 } 
+	   
+	 /** Get Bitmap's height **/
+	 public static int getBitmapOfHeight(Resources res, int id){ 
+	    try { 
+	        BitmapFactory.Options options = new BitmapFactory.Options(); 
+	        options.inJustDecodeBounds = true; 
+	        BitmapFactory.decodeResource(res, id, options);
+	        return options.outHeight; 
+	    } catch(Exception e) { 
+	        return 0; 
+	   } 
+	 }
 }
