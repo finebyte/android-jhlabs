@@ -1,10 +1,10 @@
 = Task Status History Table =
 
  == Planning ==
- 1. Working 70% over jar relase and apk distribution
- 2. Working 90% over The final release
- 3. The remaining 10% do not plan on completing.
-     But someone thought it should also complete the remaining 10%.
+ ==== 1. Working 70% over jar relase and apk distribution ====
+ ==== 2. Working 90% over The final release ====
+ ==== 3. The remaining 10% do not plan on completing But someone thought it should also complete the remaining 10%.  ====
+
  == Approx table ==
 *Total: 89 Completion: 63 Percent: 70%*
 || *category* || *complete* || *total* || 
