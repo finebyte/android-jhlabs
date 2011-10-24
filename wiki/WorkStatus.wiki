@@ -4,6 +4,7 @@
  - Working 70% over jar relase and apk distribution
 
  == Approx table ==
+*Total: 89 Current Work: 63 Percent: 70%*
 || *category* || *complete* || *total* || 
 || Color Adjustment || 19 || 24 || 
 || Distortion and Warping || 16 || 25 || 
@@ -11,7 +12,7 @@
 || Blurring and Sharpening || 17 || 20 || 
 || Edge || 3 || 3 || 
 || Alpha Channel || 1 || 1 || 
-- Total: 89 Current Work: 63 Percent: 70% -
+
 
  === Color Adjustment Filters ===
 || *filter* ||  *Completion* || *description* ||
