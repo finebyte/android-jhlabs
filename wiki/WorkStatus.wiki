@@ -4,10 +4,11 @@
  - Working 70% over jar relase and apk distribution
 
  == Approx table ==
+ - Total: 89 Current Work: 63 Percent: 70%
 || *category* || *complete* || *total* || 
 || Color Adjustment || 19 || 24 || 
-|| Distortion and Warping || 10 || 25 || 
-|| Effects || 5 || 16 || 
+|| Distortion and Warping || 16 || 25 || 
+|| Effects || 7 || 16 || 
 || Blurring and Sharpening || 17 || 20 || 
 || Edge || 3 || 3 || 
 || Alpha Channel || 1 || 1 || 
@@ -42,10 +43,10 @@
  === Distortion and Warping Filters ===
 || *filter* ||  *Completion* || *description* ||
 || bicubic scale filter || X || Scaling with bicubic interpolation ||
-|| circle filter || X || Wrap an image around a circle ||
-|| crop filter || X || Crop an area from an image ||
+|| circle filter || 0 || Wrap an image around a circle ||
+|| crop filter || 0 || Crop an area from an image ||
 || diffuse filter || 0 || Diffuse the pixels of an image ||
-|| displace filter || X || A glass distortion effect ||
+|| displace filter || 0 || A glass distortion effect ||
 || dissolve filter || 0 || Dissolves an image by turning random pixels transparent ||
 || field warp filter || X || Warp images using a field warp algorithm ||
 || flip filter || 0 || Flip and rotate images ||
@@ -56,16 +57,16 @@
 || perspective filter || X || Perspective distortion ||
 || pinch filter || X || Whirl-and-pinch distortion ||
 || polar filter || 0 || Convert to and from polar coordinates ||
-|| ripple filter || X || Ripple distortion ||
+|| ripple filter || 0 || Ripple distortion ||
 || rotate filter || X || Rotate an image ||
 || scale filter || X || Scale an image with area-averaging ||
 || shear filter || 0 || Shear an image ||
 || sphere filter || 0 || Lens distortion ||
-|| swim filter || X || An "underwater" distortion effect ||
+|| swim filter || 0 || An "underwater" distortion effect ||
 || tile image filter || X || Tile an image into a larger image ||
 || twirl filter || 0 || Distort an image by twisting ||
 || warp filter || X || A general grid image warp ||
-|| water filter || X || Simulate water ripples ||
+|| water filter || 0 || Simulate water ripples ||
 
  === Effects Filters ===
 || *filter* ||  *Completion* || *description* ||
@@ -79,12 +80,12 @@
 || feedback filter || X || A video feedback effect ||
 || halftone filter || X || Simple halftoning ||
 || light filter || X || Simulate lights on an bump-mapped image ||
-|| noise filter || X || Add noise ||
+|| noise filter || 0 || Add noise ||
 || pointillize filter || X || Draw an image as colored spots ||
 || shadow filter || X || Create drop shadows ||
 || shape filter || X || Create bump maps for lighting ||
 || stamp filter || 0 || A rubber stamp effect ||
-|| weave filter || X || A woven image effect ||
+|| weave filter || 0 || A woven image effect ||
 
  === Blurring and Sharpening Filters ===
 || *filter* ||  *Completion* || *description* ||
