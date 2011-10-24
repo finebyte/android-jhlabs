@@ -4,7 +4,7 @@
  - Working 70% over jar relase and apk distribution
 
  == Approx table ==
-*Total: 89 Current Work: 63 Percent: 70%*
+*Total: 89 Completion: 63 Percent: 70%*
 || *category* || *complete* || *total* || 
 || Color Adjustment || 19 || 24 || 
 || Distortion and Warping || 16 || 25 || 
