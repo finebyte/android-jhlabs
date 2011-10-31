@@ -21,7 +21,6 @@ import android.graphics.Canvas;
 import android.graphics.Paint;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffXfermode;
-import android.util.Log;
 
 /**
  * A filter which produces motion blur the faster, but lower-quality way.
@@ -204,11 +203,7 @@ public class MotionBlurOp {
         float scale = zoom;
         float rotate = rotation;
         float maxDistance = distance + Math.abs(rotation*imageRadius) + zoom*imageRadius;
-        //Log.d("DEBUG","maxDistance = "+maxDistance);
         int steps = log2((int)maxDistance);
-        //Log.d("DEBUG","steps = "+steps);
-        //Log.d("DEBUG","cx = "+cx+" cy = "+cy+" imageRadius = "+imageRadius+" translateX = "+translateX+" translateY = "+translateY);
-        //Log.d("DEBUG","scale = "+scale+"rotate = "+rotate+" distance = "+distance);
         
 		translateX /= maxDistance;
 		translateY /= maxDistance;
@@ -232,13 +227,6 @@ public class MotionBlurOp {
         
         for ( int i = 0; i < steps; i++ ) {
             Canvas c = new Canvas(dstBitmap);
-            //c.setBitmap(dstBitmap);
-            
-            //Graphics2D g = tmp.createGraphics();
-            //g.drawImage( tsrc, null, null );
-			//g.setRenderingHint( RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON );
-			//g.setRenderingHint( RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR );
-			//g.setComposite( AlphaComposite.getInstance( AlphaComposite.SRC_OVER, 0.5f ) );
 
             c.translate( cx+translateX, cy+translateY );
             // The .0001 works round a bug on Windows where drawImage throws an ArrayIndexOutofBoundException
@@ -249,9 +237,6 @@ public class MotionBlurOp {
             }
             c.translate( -cx, -cy );
             c.drawBitmap(tSrcBitmap, 0, 0, p);
-            //g.drawImage( dst, null, null );
-            //g.dispose();
-            //BufferedImage ti = dst;
             ti = dstBitmap;
             dstBitmap = tmpBitmap;
             tmpBitmap = ti;

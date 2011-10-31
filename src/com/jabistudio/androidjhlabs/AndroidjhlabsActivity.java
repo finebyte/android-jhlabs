@@ -55,7 +55,7 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
         mMainScrollView.addView(linearLayout);
         setContentView(mMainScrollView);
     }
-   
+    
     private void setListLayout(LinearLayout linearLayout, String titleString, int index){
         TextView filterTitle = new TextView(this);
         filterTitle.setTextSize(AndroidUtils.dipTopx(TEXT_SIZE,this));
