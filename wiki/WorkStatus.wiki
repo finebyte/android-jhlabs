@@ -8,9 +8,9 @@
  == Approx table ==
 *Total: 89 Completion: 63 Percent: 70%*
 || *category* || *complete* || *total* || 
-|| Color Adjustment || 19 || 24 || 
-|| Distortion and Warping || 16 || 25 || 
-|| Effects || 7 || 16 || 
+|| Color Adjustment || 20 || 24 || 
+|| Distortion and Warping || 20 || 25 || 
+|| Effects || 10 || 16 || 
 || Blurring and Sharpening || 17 || 20 || 
 || Edge || 3 || 3 || 
 || Alpha Channel || 1 || 1 || 
@@ -20,7 +20,7 @@
 || *filter* ||  *Completion* || *description* ||
 || channel mix filter || 0 || Mixes the RGB channels ||
 || contrast filter || 0 || Adjusts brightness and contrast ||
-|| curves filter || X || Apply adjustment curves to an image ||
+|| curves filter || 0 || Apply adjustment curves to an image ||
 || diffusion filter || 0 || Error-diffusion dithering ||
 || dither filter || X || Ordered dithering ||
 || exposure filter || 0 || Change the exposure of an image ||
@@ -45,7 +45,7 @@
 
  === Distortion and Warping Filters ===
 || *filter* ||  *Completion* || *description* ||
-|| bicubic scale filter || X || Scaling with bicubic interpolation ||
+|| bicubic scale filter || 0 || Scaling with bicubic interpolation ||
 || circle filter || 0 || Wrap an image around a circle ||
 || crop filter || 0 || Crop an area from an image ||
 || diffuse filter || 0 || Diffuse the pixels of an image ||
@@ -61,8 +61,8 @@
 || pinch filter || X || Whirl-and-pinch distortion ||
 || polar filter || 0 || Convert to and from polar coordinates ||
 || ripple filter || 0 || Ripple distortion ||
-|| rotate filter || X || Rotate an image ||
-|| scale filter || X || Scale an image with area-averaging ||
+|| rotate filter || 0 || Rotate an image ||
+|| scale filter || 0 || Scale an image with area-averaging ||
 || shear filter || 0 || Shear an image ||
 || sphere filter || 0 || Lens distortion ||
 || swim filter || 0 || An "underwater" distortion effect ||
@@ -79,12 +79,12 @@
 || color halftone filter || 0 || Color halftoning effect. ||
 || contour filter || 0 || contour effect. ||
 || crystallize filter || 0 || Make an image look like stained glass ||
-|| emboss filter || X || Simple embossing ||
+|| emboss filter || 0 || Simple embossing ||
 || feedback filter || X || A video feedback effect ||
-|| halftone filter || X || Simple halftoning ||
+|| halftone filter || 0 || Simple halftoning ||
 || light filter || X || Simulate lights on an bump-mapped image ||
 || noise filter || 0 || Add noise ||
-|| pointillize filter || X || Draw an image as colored spots ||
+|| pointillize filter || 0 || Draw an image as colored spots ||
 || shadow filter || X || Create drop shadows ||
 || shape filter || X || Create bump maps for lighting ||
 || stamp filter || 0 || A rubber stamp effect ||
