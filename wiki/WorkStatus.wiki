@@ -6,7 +6,7 @@
  ==== 3. The remaining 10% do not plan on completing But someone thought it should also complete the remaining 10%.  ====
 
  == Approx table ==
-*Total: 89 Completion: 63 Percent: 70%*
+*Total: 89 Completion: 71 Percent: 79%*
 || *category* || *complete* || *total* || 
 || Color Adjustment || 20 || 24 || 
 || Distortion and Warping || 20 || 25 || 
