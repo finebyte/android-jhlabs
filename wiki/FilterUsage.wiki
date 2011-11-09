@@ -1,5 +1,7 @@
-= Introduction =
+== Introduction ==
 
 Tells you how to use filters.
 
-= Details =
+== Details ==
+
+libs in your project folder, create folders and files are imported androidjhlabs.jar.
