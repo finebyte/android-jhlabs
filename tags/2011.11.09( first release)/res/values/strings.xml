@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Androidjhlabs</string>
+    
+    <string name="original_image">Original Image</string>
+    <string name="modify_image">Modify Image</string>
+    
+    <string-array name="filter_title_name">
+    	<item>Color Adjustment Filters</item>
+        <item>Distortion and Warping Filters</item>
+        <item>Effects Filters</item>
+        <item>Blurring and Sharpening Filters</item>
+        <item>Edge Detection</item>
+        <item>Alpha Channel Filters</item>
+    </string-array>
+    
+    <string name="coloradjustmentfilteractivity">coloradjustmentfilteractivity</string>
+    <string-array name="color_adjustment_filtername">
+        <item>ChannelMixFilter</item>
+        <item>ContrastFilter</item>
+        <item>CurvesFilter</item>
+        <item>DiffusionFilter</item>
+        <item>DitherFilter</item>
+        <item>ExposureFilter </item>
+        <item>GainFilter</item>
+        <item>GammaFilter</item>
+        <item>GrayFilter</item>
+        <item>GrayscaleFilter</item>
+        <item>HSBAdjustFilter</item>
+        <item>InvertAlphaFilter</item>
+        <item>InvertFilter</item>
+        <item>LevelsFilter</item>
+        <item>LookupFilter</item>
+        <item>MapColorsFilter</item>
+        <item>MaskFilter</item>
+        <item>PosterizeFilter</item>
+        <item>QuantizeFilter</item>
+        <item>RescaleFilter</item>
+        <item>RGBAdjustFilter</item>
+        <item>SolarizeFilter</item>
+        <item>ThresholdFilter</item>
+        <item>TritoneFilter</item>
+    </string-array>
+    
+    <string name="distortionandwarpingactivity">distortionandwarpingactivity</string>
+    <string-array name="distortion_and_warping_filtername">
+        <item>BicubicScaleFilter</item>
+        <item>CircleFilter</item>
+        <item>CropFilter</item>
+        <item>DiffuseFilter</item>
+        <item>DisplaceFilter </item>
+        <item>DissolveFilter </item>
+        <item>FieldWarpFilter</item>
+        <item>FlipFilter</item>
+        <item>KaleidoscopeFilter</item>
+        <item>MarbleFilter</item>
+        <item>MirrorFilter</item>
+        <item>OffsetFilter</item>
+        <item>PerspectiveFilter</item>
+        <item>PinchFilter</item>
+        <item>PolarFilter</item>
+        <item>RippleFilter</item>
+        <item>RotateFilter</item>
+        <item>ScaleFilter</item>
+        <item>ShearFilter</item>
+        <item>SphereFilter</item>
+        <item>SwimFilter</item>
+        <item>TileImageFilter</item>
+        <item>TwirlFilter</item>
+        <item>WarpFilter</item>
+        <item>WaterFilter</item>
+    </string-array>
+    
+    <string name="effectsactivity">effectsactivity</string>
+    <string-array name="effects_filtername">
+        <item>BlockFilter</item>
+        <item>BorderFilter</item>
+        <item>ChromeFilter</item>
+        <item>ColorHalftoneFilter</item>
+        <item>ContourFilter</item>
+        <item>CrystallizeFilter</item>
+        <item>EmbossFilter</item>
+        <item>FeedbackFilter</item>
+        <item>HalftoneFilter</item>
+        <item>LightFilter</item>
+        <item>NoiseFilter</item>
+        <item>PointillizeFilter</item>
+        <item>ShadowFilter</item>
+        <item>ShapeFilter</item>
+        <item>StampFilter</item>
+        <item>WeaveFilter</item>
+    </string-array>
+    
+    <string name="blurringandsharpeningactivity">blurringandsharpeningactivity</string>
+    <string-array name="blurring_and_sharpening_filtername">
+        <item>BlurFilter</item>
+        <item>BoxBlurFilter</item>
+        <item>BumpFilter</item>
+        <item>DespeckleFilter</item>
+        <item>GaussianFilter</item>
+        <item>GlowFilter</item>
+        <item>HighPassFilter</item>
+        <item>LensBlurFilter</item>
+        <item>MaximumFilter</item>
+        <item>MedianFilter</item>
+        <item>MinimumFilter</item>
+        <item>MotionBlurFilter</item>
+        <item>OilFilter</item>
+        <item>RaysFilter</item>
+        <item>ReduceNoiseFilter</item>
+        <item>SharpenFilter</item>
+        <item>SmartBlurFilter</item>
+        <item>UnsharpFilter</item>
+        <item>VariableBlurFilter</item>
+    </string-array>
+   
+    <string name="edgedetectionactivity">edgedetectionactivity</string>
+    <string-array name="edge_detection_filtername">
+        <item>DoGFilter</item>
+        <item>EdgeFilter</item>
+        <item>LaplaceFilter</item>
+    </string-array>
+    
+    <string name="alphachannelactivity">alphachannelactivity</string>
+    <string-array name="alpha_channel_filtername">
+        <item>OpacityFilter</item>
+    </string-array>
+</resources>
