@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">Androidjhlabs</string>
     
+    <string name="none_filter">Filter could not be ported.</string>
+    
     <string name="original_image">Original Image</string>
     <string name="modify_image">Modify Image</string>
     

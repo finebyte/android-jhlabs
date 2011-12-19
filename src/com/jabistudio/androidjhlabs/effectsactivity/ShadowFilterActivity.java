@@ -1,5 +1,6 @@
 package com.jabistudio.androidjhlabs.effectsactivity;
 
+import com.jabistudio.androidjhlabs.R;
 import com.jabistudio.androidjhlabs.SuperFilterActivity;
 import com.jabistudio.androidjhlabs.coloradjustmentfilteractivity.ChannelMixFilterActivity;
 import com.jabistudio.androidjhlabs.filter.ChannelMixFilter;
@@ -47,8 +48,13 @@ public class ShadowFilterActivity extends SuperFilterActivity implements OnSeekB
     
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        TextView view = new TextView(this);
+        view.setText(R.string.none_filter);
+        setContentView(view);
+        /*
         setTitle(TITLE);
         filterSeekBarSetup(mMainLayout);
+        */
     }
     
     /**
