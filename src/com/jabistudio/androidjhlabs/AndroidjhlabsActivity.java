@@ -1,9 +1,5 @@
 package com.jabistudio.androidjhlabs;
 
-import net.daum.adam.publisher.AdView;
-import net.daum.adam.publisher.AdView.AnimationType;
-import net.daum.adam.publisher.AdView.OnAdClickedListener;
-
 import com.jabistudio.androidjhlabs.filter.util.AndroidUtils;
 
 import android.app.Activity;
@@ -38,7 +34,6 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
 	
 	private RelativeLayout mMainLayout;
 	private ScrollView mMainScrollView;
-	private AdView mAdView = null;
 	
 	private int mDispalyHeight;
 	
@@ -65,33 +60,8 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
         mMainLayout.addView(mMainScrollView);
         
         setContentView(mMainLayout);
-        
-        adamViewSetting();
     }
-    
-    private void adamViewSetting(){
-        // Ad@m 광고 뷰 생성 및 설정
-        mAdView = new AdView(this);
-        // 할당 받은 clientId 설정
-        mAdView.setClientId("294bZ0yT136e2424a27");
-        // 광고 갱싞 시간 : 기본 60초
-        mAdView.setRequestInterval(12);
-        // Animation 효과 : 기본 값은 AnimationType.NONE
-        mAdView.setAnimationType(AnimationType.FLIP_HORIZONTAL);
-        mAdView.setVisibility(View.VISIBLE);
-        
-        mMainLayout.addView(mAdView);
-        
-        // XML상에 android:layout_alignParentBottom="true" 와
-        // 같은 역할을 함
-        RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(mAdView.getLayoutParams());
-        params.addRule(RelativeLayout.ALIGN_PARENT_BOTTOM);
-        // 앞에서 만든 params 레이아웃을 광고 뷰에 적용함.
-        mAdView.setLayoutParams(params);
-        
-        
-    }
-    
+
     private void setListLayout(LinearLayout linearLayout, String titleString, int index){
         TextView filterTitle = new TextView(this);
         filterTitle.setTextSize(AndroidUtils.dipTopx(TEXT_SIZE,this));
@@ -132,10 +102,6 @@ public class AndroidjhlabsActivity extends Activity implements OnClickListener{
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(mAdView != null){
-            mAdView.destroy();
-            mAdView = null;
-        }
     }
 	
 }
